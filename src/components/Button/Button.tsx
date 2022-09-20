@@ -1,5 +1,6 @@
 import React from "react";
-import { css, cx } from "@emotion/css";
+import { css } from "@emotion/css";
+import { typography } from "../../theme";
 
 const color = "white";
 
@@ -15,6 +16,7 @@ const Button = (props: ButtonProps) => {
         background-color: hotpink;
         font-size: 24px;
         border-radius: 4px;
+        font-family: ${typography.Neucha};
         &:hover {
           color: ${color};
         }
