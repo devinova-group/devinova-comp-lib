@@ -54,5 +54,8 @@
   "files": [
     "dist"
   ],
-  "types": "dist/index.d.ts"
+  "types": "dist/index.d.ts",
+  "dependencies": {
+    "@emotion/styled": "^11.10.4"
+  }
 }
