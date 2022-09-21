@@ -57,8 +57,8 @@ export const colorPalette = {
   Text: {
     Textv1: "#08011C",
     Textv2: "#585858",
-    TextWhite: "#000000",
-    TextBlack: "#FFFFFF",
+    TextWhite: "#FFFFFF",
+    TextBlack: "#000000",
   },
   Status: {
     Error: "#C12945",
