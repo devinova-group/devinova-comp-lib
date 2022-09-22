@@ -1,26 +1,29 @@
 import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
-import { Text } from "./typography.component";
+import Typography from "./typography.component";
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: "ReactComp/Text",
-  component: Text,
-} as ComponentMeta<typeof Text>;
+  title: "ReactComp/Typography",
+  component: Typography,
+} as ComponentMeta<typeof Typography>;
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-const Template: ComponentStory<typeof Text> = (args) => (
-  <Text {...args}>Testing</Text>
+const Template: ComponentStory<typeof Typography> = (args) => (
+  <Typography {...args}>Testing</Typography>
 );
 
-export const Primary = Template.bind({});
+export const h1Neucha = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
-Primary.args = {
-  as: "h1",
+h1Neucha.args = {
+  variant: "h1Neucha",
 };
 
-export const ClickMe = Template.bind({});
-ClickMe.args = {
-  as: "h2",
+export const h2QS = Template.bind({});
+h2QS.args = {
+  variant: "h2QS",
 };
+
+export const NoVariantTest = Template.bind({});
+NoVariantTest.args = {};
