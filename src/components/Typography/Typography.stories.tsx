@@ -23,7 +23,10 @@ h1Neucha.args = {
 export const h2QS = Template.bind({});
 h2QS.args = {
   variant: "h2QS",
+  style: { color: "blue" },
 };
 
 export const NoVariantTest = Template.bind({});
-NoVariantTest.args = {};
+NoVariantTest.args = {
+  color: "blackRussian",
+};
