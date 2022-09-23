@@ -55,10 +55,10 @@ export const colorPalette = {
     Primary: "#B2C3FF",
   },
   Text: {
-    Textv1: "#08011C",
-    Textv2: "#585858",
-    TextWhite: "#FFFFFF",
-    TextBlack: "#000000",
+    blackRussian: "#08011C",
+    gray: "#585858",
+    White: "#FFFFFF",
+    Black: "#000000",
   },
   Status: {
     Error: "#C12945",
