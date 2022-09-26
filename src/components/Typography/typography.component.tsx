@@ -1,13 +1,34 @@
-import { Typography } from "./typography.component.styles";
-import { TypographyProps } from "./typography.component.props";
+import { Text } from "./typography.component.styles";
+import { TypographyProps, variantMapping } from "./typography.component.props";
 import React from "react";
 
-export const Text: React.FC<TypographyProps> = ({ variant, as, children }) => {
-  let Tag = as ? as : "p";
+const Typography: React.FC<TypographyProps> = ({
+  variant,
+  as,
+  children,
+  color,
+  style,
+  textAlign,
+}) => {
+  let Tag;
+  if (!as && variantMapping[variant as keyof typeof variantMapping]) {
+    let element = variantMapping[variant as keyof typeof variantMapping];
+    Tag = element;
+  } else {
+    Tag = as ? as : "p";
+  }
 
   return (
-    <Typography as={Tag} variant={variant}>
+    <Text
+      as={Tag}
+      variant={variant}
+      color={color}
+      style={style}
+      textAlign={textAlign}
+    >
       {children}
-    </Typography>
+    </Text>
   );
 };
+
+export default Typography;
