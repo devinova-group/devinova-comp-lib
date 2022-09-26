@@ -30,3 +30,9 @@ export const NoVariantTest = Template.bind({});
 NoVariantTest.args = {
   color: "blackRussian",
 };
+
+export const AsTest = Template.bind({});
+AsTest.args = {
+  variant: "h1Neucha",
+  as: "h4",
+};

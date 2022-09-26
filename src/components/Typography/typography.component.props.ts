@@ -3,20 +3,16 @@ import React from "react";
 interface TypographyProps {
   variant?: keyof typeof variantMapping;
   as?: any;
-  bold?: boolean;
-  align?: string | any;
   children?: React.ReactNode | never;
   color?: string;
-  Typography?: any;
+  textAlign?: string;
   style?: React.CSSProperties;
 }
 
 interface StyledTextProps extends TypographyProps {
-  fontWeight?: boolean;
   color?: string;
-  fontsize?: string;
   variant?: string | any;
-  theme?: any;
+  textAlign?: string;
 }
 
 export const variantMapping = {

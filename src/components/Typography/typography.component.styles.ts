@@ -4,6 +4,17 @@ import { colorPalette, typography } from "../../theme";
 
 type enumStyles = Record<string, CSSObject>;
 
+const baseStyling: CSSObject = {
+  margin: "0",
+};
+
+const alignVariants: enumStyles = {
+  start: { textAlign: "left" },
+  end: { textAlign: "right" },
+  center: { textAlign: "center" },
+  justify: { textAlign: "justify" },
+};
+
 const textVariants: enumStyles = {
   // Typography Headers Version 1: Neucha
   h1Neucha: {
@@ -286,10 +297,18 @@ const colorVariants: enumStyles = {
   },
 };
 
+const alignText = ({ textAlign = "start" }: StyledTextProps) =>
+  alignVariants[textAlign];
+
 const textColor = ({ color = "black" }: StyledTextProps) =>
   colorVariants[color];
 
 const textStyle = ({ variant = "NSBody1" }: StyledTextProps) =>
   textVariants[variant];
 
-export const Text = styled.h1<StyledTextProps>(textStyle, textColor);
+export const Text = styled.h1<StyledTextProps>(
+  textStyle,
+  textColor,
+  alignText,
+  baseStyling
+);

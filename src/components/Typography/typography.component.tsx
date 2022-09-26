@@ -8,11 +8,10 @@ const Typography: React.FC<TypographyProps> = ({
   children,
   color,
   style,
+  textAlign,
 }) => {
   let Tag;
-  if (as) {
-    Tag = as ? as : "p";
-  } else if (variantMapping[variant as keyof typeof variantMapping]) {
+  if (!as && variantMapping[variant as keyof typeof variantMapping]) {
     let element = variantMapping[variant as keyof typeof variantMapping];
     Tag = element;
   } else {
@@ -20,7 +19,13 @@ const Typography: React.FC<TypographyProps> = ({
   }
 
   return (
-    <Text as={Tag} variant={variant} color={color} style={style}>
+    <Text
+      as={Tag}
+      variant={variant}
+      color={color}
+      style={style}
+      textAlign={textAlign}
+    >
       {children}
     </Text>
   );
