@@ -4,7 +4,7 @@ injectGlobal`
 @import url('https://fonts.googleapis.com/css2?family=Neucha&family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poiret+One&family=Quicksand:wght@300;400;500;600;700&display=swap');
 `;
 
-export const palette = {
+export const colorPalette = {
   DeviDaisy: {
     50: "#ECE8F6",
     100: "#CFC6E8",
@@ -55,10 +55,10 @@ export const palette = {
     Primary: "#B2C3FF",
   },
   Text: {
-    Textv1: "#08011C",
-    Textv2: "#585858",
-    TextWhite: "#FFFFFF",
-    TextBlack: "#000000",
+    blackRussian: "#08011C",
+    gray: "#585858",
+    White: "#FFFFFF",
+    Black: "#000000",
   },
   Status: {
     Error: "#C12945",
