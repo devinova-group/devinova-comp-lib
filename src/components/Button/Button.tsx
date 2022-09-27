@@ -77,7 +77,7 @@ small: {
   fontFamily: typography.Quicksand,
   fontWeight:'500',
   fontSize: "14px",
-  padding: "20px 35px"
+  padding: "20px 30px"
 },
 medium: {
   margin:"auto",
@@ -86,7 +86,7 @@ medium: {
   fontFamily: typography.Quicksand,
   fontWeight:'600',
   fontSize: "20px",
-  padding: "20px 45px",
+  padding: "20px 40px",
 },
 large: {
   margin:"auto",
