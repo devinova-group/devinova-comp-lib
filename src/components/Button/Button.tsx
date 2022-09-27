@@ -2,22 +2,7 @@ import React, { Children } from 'react';
 import styled, { CSSObject } from "@emotion/styled";
 import { palette } from '../../theme';
 import { typography } from '../../theme';
-
-
-
-interface ButtonOption  {
-  text?: string;
-  icon?: string;
-  onClick?: () => void;
-  variant: 'primary' | 'error' | 'positive' | '';
-  size?: "small" | "medium" | "large" | '';
-  href?: string;
-  disabled?: boolean;
-  isFullWidth?: boolean;
-  className?: string;
-  style?: React.CSSProperties;
-  children: React.PropsWithChildren
-}
+import { ButtonOption } from './Button.component.types';
 
 const base: CSSObject = {
 color:palette.Text.TextWhite,
