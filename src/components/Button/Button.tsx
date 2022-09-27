@@ -3,7 +3,9 @@ import styled, { CSSObject } from "@emotion/styled";
 import { palette } from '../../theme';
 import { typography } from '../../theme';
 
-interface ButtonOption {
+
+
+interface ButtonOption  {
   text?: string;
   icon?: string;
   onClick?: () => void;
@@ -42,42 +44,42 @@ primary: {
   color:palette.Text.TextWhite,
   backgroundColor: palette.DeviDaisy[500],
   boxShadow: "5px 10px 20px rgba(0,0,0,0.25)",
-  borderRadius: "4px",
+  borderRadius: "8px",
   ":hover":{
     boxSizing:"border-box",
     color:palette.DeviDaisy[500],
     backgroundColor: "transparent",
     border: "2px solid #6044B5",
     boxShadow: "(5px 10px 20px rgba(0,0,0,0.25)",
-    borderRadius: "4px",
+    borderRadius: "8px",
   },
 },
 error: {
   color: palette.Text.TextWhite,
   backgroundColor: palette.Status.Error,
   boxShadow: "5px 10px 20px rgba(0,0,0,0.25)",
-  borderRadius: "4px",
+  borderRadius: "8px",
   ":hover":{
     boxSizing:"border-box",
     color:palette.Status.Error,
     backgroundColor: "transparent",
     border: "2px solid #C12945",
     boxShadow: "(5px 10px 20px rgba(0,0,0,0.25)",
-    borderRadius: "4px",
+    borderRadius: "8px",
   },
 },
 positive: {
   color: palette.Text.TextWhite,
   backgroundColor: palette.Status.Positive,
   boxShadow: "5px 10px 20px rgba(0,0,0,0.25)",
-  borderRadius: "4px",
+  borderRadius: "8px",
   ":hover":{
     boxSizing:"border-box",
     color:palette.Status.Positive,
     backgroundColor: "transparent",
     border: "2px solid #26962B",
     boxShadow: "(5px 10px 20px rgba(0,0,0,0.25)",
-    borderRadius: "4px",
+    borderRadius: "8px",
   },
 },
 };
@@ -117,20 +119,28 @@ const buttonDisabled: EnumStyles = {
   cursor:"not-allowed",
   color:palette.Text.TextWhite,
   backgroundColor: palette.DeviDaisy[500],
+  background: "rgba(96, 68, 181, 0.35)",
+  boxShadow: "5px 10px 20px rgba(0, 0, 0, 0.25)",
+  borderRadius: "8px",
 },
 error: {
   cursor:"not-allowed",
-  color: "white",
-  backgroundColor: "red",
+  color:palette.Text.TextWhite,
+  backgroundColor: palette.Status.Error,
+  background: "rgba(193, 41, 69, 0.55)",
+  boxShadow: "5px 10px 20px rgba(0, 0, 0, 0.25)",
+  borderRadius: "8px",
 }, 
 positive: {
-  cursor: "not-allowed",
-  backgroundColor: "grey",
-  color: "#f5f5f5",
-  boxShadow: "5px 10px 20px rgba(0,0,0,0.25)",
-  borderRadius: "4px",
+  cursor:"not-allowed",
+  color:palette.Text.TextWhite,
+  backgroundColor: palette.Status.Positive,
+  background: "rgba(38, 150, 43, 0.5)",
+  boxShadow: "5px 10px 20px rgba(0, 0, 0, 0.25)",
+  borderRadius: "8px",
 },
 };
+
 
 const fullWidth = ({ isFullWidth = false }: ButtonOption) =>
 isFullWidth
