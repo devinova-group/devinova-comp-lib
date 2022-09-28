@@ -17,7 +17,8 @@ export const Primary = Template.bind({});
 Primary.args = {
   variant:"primary",
   children:"Button",
-  size:"medium"
+  size:"medium",
+  disabled:false,
 };
 
 export const ClickMe = Template.bind({});
