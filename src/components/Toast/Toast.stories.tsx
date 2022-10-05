@@ -25,6 +25,7 @@ Success.args = {
   variant: "success",
   position: "top-right",
   autoClose: true,
+  autoCloseTime: 5000,
 };
 export const Error = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
@@ -33,6 +34,7 @@ Error.args = {
   variant: "error",
   position: "bottom-right",
   autoClose: true,
+  autoCloseTime: 5000,
 };
 export const Warning = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
@@ -41,6 +43,7 @@ Warning.args = {
   variant: "warning",
   position: "bottom-center",
   autoClose: true,
+  autoCloseTime: 5000,
 };
 export const Info = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
@@ -49,4 +52,5 @@ Info.args = {
   variant: "info",
   position: "bottom-left",
   autoClose: true,
+  autoCloseTime: 5000,
 };

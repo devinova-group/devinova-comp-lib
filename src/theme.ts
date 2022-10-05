@@ -33,8 +33,9 @@ export const colorPalette = {
     Background: "#FFFEFB",
   },
   LightMode: {
-    Primary: "#6044B5",
+    Primary: "#885FFF",
     Secondary: "#4C3A80",
+    SecondaryVariant: "#6e6893",
   },
   DarkMode: {
     Highlight: "#A689FF",

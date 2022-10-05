@@ -6,6 +6,7 @@ export interface testingProps {
   variant?: string;
   position?: string;
   autoClose?: boolean;
+  autoCloseTime?: number;
 }
 
 export const Testing = (props: testingProps) => {
@@ -15,9 +16,15 @@ export const Testing = (props: testingProps) => {
   const variant = props.variant;
   const position = props.position;
   const autoClose = props.autoClose;
+  const autoCloseTime = props.autoCloseTime;
 
   const addToast = () => {
-    toastRef.current?.createToast({ variant, content });
+    toastRef.current?.createToast({
+      variant,
+      content,
+      autoClose,
+      autoCloseTime,
+    });
   };
 
   return (
@@ -30,7 +37,12 @@ export const Testing = (props: testingProps) => {
       >
         <button type="submit">Test</button>
       </form>
-      <ToastPortal position={position} ref={toastRef} autoClose={autoClose} />
+      <ToastPortal
+        position={position}
+        ref={toastRef}
+        autoClose={autoClose}
+        autoCloseTime={autoCloseTime}
+      />
     </>
   );
 };

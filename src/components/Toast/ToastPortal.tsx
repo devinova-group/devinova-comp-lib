@@ -18,7 +18,7 @@ interface RefAtts {
 }
 
 const ToastPortal = forwardRef<RefAtts, portal>(
-  ({ autoClose = false, autoCloseTime = 5000, position }, ref) => {
+  ({ autoClose = true, autoCloseTime = 10000, position }, ref) => {
     const [toasts, setToasts] = useState<toastProps[]>([]);
     const { loaded, portalId } = useToastPortal();
 
@@ -47,6 +47,8 @@ const ToastPortal = forwardRef<RefAtts, portal>(
               key={i}
               content={t.content}
               variant={t.variant}
+              autoCloseTime={t.autoCloseTime}
+              autoClose={t.autoClose}
               onClose={() => removeToast(t.id)}
             />
           ))}

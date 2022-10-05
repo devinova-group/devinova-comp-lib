@@ -1,11 +1,11 @@
 import styled, { CSSObject } from "@emotion/styled";
-import { spacing } from "../../units";
 import { colorPalette } from "../../theme";
 import { toastProps } from "./Toast.props";
 
 type enumStyles = Record<string, CSSObject>;
 
 const baseStyling: CSSObject = {
+  position: "relative",
   height: 50,
   width: 280,
   borderRadius: 8,
