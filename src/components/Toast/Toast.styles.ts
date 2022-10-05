@@ -12,6 +12,8 @@ const baseStyling: CSSObject = {
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
+  "&:hover": { transform: "scale(.95)" },
+  // "&:before": { content: '"\00D7"' },
 };
 
 const variants: enumStyles = {
