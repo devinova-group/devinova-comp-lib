@@ -66,6 +66,25 @@ export const colorPalette = {
     Positive: "#26962B",
     Positive2: "#9AE79D",
   },
+  ToastColor: {
+    SuccessV1: "#3CC13B4D",
+    WarningV1: "#FFC34E33",
+    ErrorV1: "#F0373833",
+    NoticeV1: "#4B88CF4D",
+    InfoV1: "#58585826",
+    SuccessV2: "#3CC13B",
+    WarningV2: "#FFC34E80",
+    ErrorV2: "#F03738B3",
+    NoticeV2: "#4B88CFD9",
+    InfoV2: "#585858CC",
+  },
+  ToastBorderColor: {
+    Success: "#3CC13B",
+    Warning: "#FFC34E",
+    Error: "#F03738",
+    Notice: "#4B88CF",
+    Info: "#585858",
+  },
 };
 
 export const typography = {

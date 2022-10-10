@@ -3,7 +3,7 @@ import { spacing } from "../../units";
 import { portal } from "./ToastPortal";
 
 const baseStyling: CSSObject = {
-  width: "300px",
+  width: "400px",
   height: "fitcontent",
   position: "fixed",
   cursor: "pointer",

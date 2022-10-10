@@ -22,8 +22,6 @@ export const Testing = (props: testingProps) => {
     toastRef.current?.createToast({
       variant,
       content,
-      autoClose,
-      autoCloseTime,
     });
   };
 

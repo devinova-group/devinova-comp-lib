@@ -35,7 +35,15 @@ const ToastPortal = forwardRef<RefAtts, portal>(
 
     useImperativeHandle(ref, () => ({
       createToast(toast: toastProps) {
-        setToasts([...toasts, { ...toast, id: uuid() }]);
+        setToasts([
+          ...toasts,
+          {
+            ...toast,
+            id: uuid(),
+            autoClose: autoClose,
+            autoCloseTime: autoCloseTime,
+          },
+        ]);
       },
     }));
 

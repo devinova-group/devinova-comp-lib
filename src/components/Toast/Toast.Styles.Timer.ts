@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
 import { css, CSSObject, keyframes } from "@emotion/react";
 import { toastDurationProps } from "./Toast.props";
+import { colorPalette } from "../../theme";
 
 const duration = keyframes`
     from{
@@ -13,11 +14,11 @@ const duration = keyframes`
 `;
 
 export const ToastDuration = styled.div<toastDurationProps>`
-  height: 10px;
+  height: 5px;
   position: absolute;
   bottom: 0;
   left: 0;
-  background-color: red;
+  background-color: ${colorPalette.LightMode.Secondary};
   animation-name: ${duration};
   animation-duration: ${(props) =>
     props.autoCloseTime ? props.autoCloseTime / 1000 : 1}s;
