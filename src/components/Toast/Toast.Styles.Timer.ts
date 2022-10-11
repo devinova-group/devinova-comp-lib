@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { css, CSSObject, keyframes } from "@emotion/react";
+import { keyframes } from "@emotion/react";
 import { toastDurationProps } from "./Toast.props";
 import { colorPalette } from "../../theme";
 
