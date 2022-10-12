@@ -11,5 +11,8 @@ export interface ButtonOption  {
     isFullWidth?: boolean;
     className?: string;
     style?: React.CSSProperties;
-    children: React.ReactNode
+    children: React.ReactNode;
+    hasIcon?:boolean;
+    iconName?: string;
+    isHover?:boolean;
 }

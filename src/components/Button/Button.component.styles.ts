@@ -14,7 +14,6 @@ const base: CSSObject = {
   userSelect: "none",
   border: "2px solid transparent",
   fontSize: "20px",
-  gap:"10px",
   transition: "all .15s ease-in-out",
   "&:focus": {
     outline: "0",
@@ -23,50 +22,67 @@ const base: CSSObject = {
 
 type EnumStyles = Record<string, CSSObject>;
 
-const buttonVariant: EnumStyles = {
+export const buttonVariant: EnumStyles = {
   primary: {
     color:colorPalette.Text.White,
     backgroundColor: colorPalette.DeviDaisy[500],
     boxShadow: "5px 10px 20px rgba(0,0,0,0.25)",
-    borderRadius: "8px",
-    ":hover":{
-      boxSizing:"border-box",
-      color:colorPalette.DeviDaisy[500],
-      backgroundColor: "transparent",
-      border: "2px solid #6044B5",
-      boxShadow: "(5px 10px 20px rgba(0,0,0,0.25)",
-      borderRadius: "8px",
-    },
+    
   },
   error: {
     color: colorPalette.Text.White,
     backgroundColor: colorPalette.Status.Error,
     boxShadow: "5px 10px 20px rgba(0,0,0,0.25)",
-    borderRadius: "8px",
-    ":hover":{
-      boxSizing:"border-box",
-      color:colorPalette.Status.Error,
-      backgroundColor: "transparent",
-      border: "2px solid #C12945",
-      boxShadow: "(5px 10px 20px rgba(0,0,0,0.25)",
-      borderRadius: "8px",
-    },
+   
   },
   positive: {
     color: colorPalette.Text.White,
     backgroundColor: colorPalette.Status.Positive,
     boxShadow: "5px 10px 20px rgba(0,0,0,0.25)",
-    borderRadius: "8px",
-    ":hover":{
-      boxSizing:"border-box",
-      color:colorPalette.Status.Positive,
-      backgroundColor: "transparent",
-      border: "2px solid #26962B",
-      boxShadow: "(5px 10px 20px rgba(0,0,0,0.25)",
-      borderRadius: "8px",
-    },
+    
   },
 };
+
+const buttonHover: EnumStyles ={
+primary:{
+  color:colorPalette.Text.White,
+  backgroundColor: colorPalette.DeviDaisy[500],
+  boxShadow: "5px 10px 20px rgba(0,0,0,0.25)",
+  "&:hover":{
+    boxSizing:"border-box",
+    color:colorPalette.DeviDaisy[500],
+    backgroundColor: "transparent",
+    border: "2px solid #6044B5",
+    boxShadow: "(5px 10px 20px rgba(0,0,0,0.25)",
+  },
+},
+error:{
+  color: colorPalette.Text.White,
+    backgroundColor: colorPalette.Status.Error,
+    boxShadow: "5px 10px 20px rgba(0,0,0,0.25)",
+  "&:hover":{
+    boxSizing:"border-box",
+    color:colorPalette.Status.Error,
+    backgroundColor: "transparent",
+    border: "2px solid #C12945",
+    boxShadow: "(5px 10px 20px rgba(0,0,0,0.25)",
+
+  },
+},
+positive:{
+  color: colorPalette.Text.White,
+  backgroundColor: colorPalette.Status.Positive,
+  boxShadow: "5px 10px 20px rgba(0,0,0,0.25)",
+  "&:hover":{
+    boxSizing:"border-box",
+    color:colorPalette.Status.Positive,
+    backgroundColor: "transparent",
+    border: "2px solid #26962B",
+    boxShadow: "(5px 10px 20px rgba(0,0,0,0.25)",
+  },
+}
+
+}
 
 const buttonSize: EnumStyles = {
   small: {
@@ -76,7 +92,9 @@ const buttonSize: EnumStyles = {
     fontFamily: typography.Quicksand,
     fontWeight:'500',
     fontSize: "14px",
-    padding: "5px 30px"
+    padding: "5px 19px",
+    gap:"6px",
+    borderRadius: "4px",
   },
   medium: {
     margin:"auto",
@@ -85,7 +103,9 @@ const buttonSize: EnumStyles = {
     fontFamily: typography.Quicksand,
     fontWeight:'600',
     fontSize: "20px",
-    padding: "15px 40px",
+    padding: "15px 30px",
+    gap:"8px",
+    borderRadius: "6px",
   },
   large: {
     margin:"auto",
@@ -94,12 +114,15 @@ const buttonSize: EnumStyles = {
     fontFamily: typography.Quicksand,
     fontWeight:'600',
     fontSize: "20px",
+    gap:"10px",
     padding: "20px 80px",
+    borderRadius: "8px",
   },
 };
 
 const buttonDisabled: EnumStyles = {
    primary: {
+    margin:"auto",
     cursor:"not-allowed",
     color:colorPalette.Text.White,
     backgroundColor: colorPalette.DeviDaisy[500],
@@ -108,6 +131,7 @@ const buttonDisabled: EnumStyles = {
     borderRadius: "8px",
   },
   error: {
+    margin:"auto",
     cursor:"not-allowed",
     color:colorPalette.Text.White,
     backgroundColor: colorPalette.Status.Error,
@@ -116,6 +140,7 @@ const buttonDisabled: EnumStyles = {
     borderRadius: "8px",
   }, 
   positive: {
+    margin:"auto",
     cursor:"not-allowed",
     color:colorPalette.Text.White,
     backgroundColor: colorPalette.Status.Positive,
@@ -141,5 +166,6 @@ export const ButtonComponent = styled.button<ButtonOption>`
       ${(props) => props.size && buttonSize[props.size]}
       ${(props) => props.disabled ? buttonDisabled[props.variant]  : buttonVariant[props.variant]}
       ${fullWidth}
+      ${(props) => props.isHover && buttonHover[props.variant]}
   `;
 
