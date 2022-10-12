@@ -122,7 +122,6 @@ const buttonSize: EnumStyles = {
 
 const buttonDisabled: EnumStyles = {
    primary: {
-    margin:"auto",
     cursor:"not-allowed",
     color:colorPalette.Text.White,
     backgroundColor: colorPalette.DeviDaisy[500],
@@ -131,7 +130,6 @@ const buttonDisabled: EnumStyles = {
     borderRadius: "8px",
   },
   error: {
-    margin:"auto",
     cursor:"not-allowed",
     color:colorPalette.Text.White,
     backgroundColor: colorPalette.Status.Error,
@@ -140,7 +138,6 @@ const buttonDisabled: EnumStyles = {
     borderRadius: "8px",
   }, 
   positive: {
-    margin:"auto",
     cursor:"not-allowed",
     color:colorPalette.Text.White,
     backgroundColor: colorPalette.Status.Positive,
