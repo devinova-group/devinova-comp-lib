@@ -1,42 +1,34 @@
 import React, { useRef } from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
-import Card from "./Card/Card";
+import { Card } from "./Card";
+import { CardContent } from "./CardContent";
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: "ReactComp/Toast",
+  title: "ReactComp/Card",
   component: Card,
 } as ComponentMeta<typeof Card>;
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
 const Template: ComponentStory<typeof Card> = (args) => (
-  <>
-    <Card {...args} />
-  </>
+  <Card {...args}>
+    <CardContent>
+      <div>test</div>
+      <div>test</div>
+    </CardContent>
+  </Card>
 );
 
-export const Success = Template.bind({});
+export const Raised = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
-Success.args = {
-  content: "This is a success toast",
-  variant: "success",
+Raised.args = {
+  raised: true,
+  dark: false,
 };
-export const Error = Template.bind({});
+export const UnRaised = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
-Error.args = {
-  content: "This is a error toast",
-  variant: "error",
-};
-export const Warning = Template.bind({});
-// More on args: https://storybook.js.org/docs/react/writing-stories/args
-Warning.args = {
-  content: "This is a warning toast",
-  variant: "warning",
-};
-export const Info = Template.bind({});
-// More on args: https://storybook.js.org/docs/react/writing-stories/args
-Info.args = {
-  content: "This is a info toast",
-  variant: "info",
+UnRaised.args = {
+  raised: false,
+  dark: true,
 };

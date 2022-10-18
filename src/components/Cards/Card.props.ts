@@ -4,12 +4,12 @@ export interface cardProps {
   style?: React.CSSProperties;
   children?: React.ReactNode | never;
   raised?: boolean;
+  dark?: boolean;
 }
 
 export interface cardContentProps {
   children?: React.ReactNode | never;
   style?: React.CSSProperties;
-  component?: ElementType;
 }
 
 export interface cardHeaderProps {

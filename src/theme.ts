@@ -27,10 +27,11 @@ export const colorPalette = {
     600: "#7E778D",
     700: "#6B6278",
     800: "#4A4458",
-    900: "#292336",
   },
   Background: {
     Background: "#FFFEFB",
+    CardLight: "#FFFFFFF2",
+    CardDark: "#6B6278CC",
   },
   LightMode: {
     Primary: "#885FFF",
