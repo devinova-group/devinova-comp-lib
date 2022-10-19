@@ -1,39 +1,36 @@
-import React, { ElementType } from "react";
+import { ElementType, ReactNode, CSSProperties } from "react";
+import { variantMapping } from "../Typography/typography.component.props";
 
-export interface cardProps {
-  style?: React.CSSProperties;
-  children?: React.ReactNode | never;
+export interface CardProps {
+  style?: CSSProperties;
+  children?: ReactNode | never;
   raised?: boolean;
   dark?: boolean;
 }
 
-export interface cardContentProps {
-  children?: React.ReactNode | never;
-  style?: React.CSSProperties;
+export interface CardContentProps {
+  children?: ReactNode | never;
+  style?: CSSProperties;
 }
 
-export interface cardHeaderProps {
-  style?: React.CSSProperties;
-  action?: React.ReactNode;
-  avatar?: React.ReactNode;
-  subheader?: React.ReactNode;
-  title?: React.ReactNode;
-  subheaderTypographyProps?: object;
-  titleTypographyProps?: object;
-  component?: ElementType;
+export interface CardHeaderProps {
+  style?: CSSProperties;
+  subheader?: string;
+  title: string;
+  subheaderTypographyProps?: keyof typeof variantMapping;
+  titleTypographyProps?: keyof typeof variantMapping;
 }
 
-export interface cardMediaProps {
-  style?: React.CSSProperties;
+export interface CardMediaProps {
+  style?: CSSProperties;
   height: number;
   src: string;
   component: ElementType;
 }
 
-export interface collapseProps {
-  style?: React.CSSProperties;
-  children?: React.ReactNode | never;
-  component?: ElementType;
+export interface CollapseProps {
+  style?: CSSProperties;
+  children?: ReactNode | never;
   in?: boolean;
   orientation?: "horizontal" | "vertical";
 }

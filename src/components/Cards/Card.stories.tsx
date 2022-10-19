@@ -3,6 +3,7 @@ import { ComponentStory, ComponentMeta } from "@storybook/react";
 
 import { Card } from "./Card";
 import { CardContent } from "./CardContent";
+import { CardHeader } from "./CardHeader";
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
@@ -13,6 +14,7 @@ export default {
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
 const Template: ComponentStory<typeof Card> = (args) => (
   <Card {...args}>
+    <CardHeader title="testing" subheader="123" titleTypographyProps="h1Neucha"/>
     <CardContent>
       <div>test</div>
       <div>test</div>

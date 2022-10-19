@@ -1,8 +1,8 @@
 import styled from "@emotion/styled";
 import { colorPalette } from "../../../theme";
-import { cardProps } from "../Card.props";
+import { CardProps } from "../Card.props";
 
-export const Card = styled.div<cardProps>`
+export const Card = styled.div<CardProps>`
   box-sizing: border-box;
   position: relative;
   height: 280px;
@@ -17,6 +17,7 @@ export const Card = styled.div<cardProps>`
     props.raised ? "4px 4px 21px rgba(0, 0, 0, 0.25)" : "none"};
   border-radius: 20px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   padding: 1rem;
 `;

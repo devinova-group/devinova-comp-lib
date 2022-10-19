@@ -52,7 +52,7 @@ const ToastPortal = forwardRef<RefAtts, portal>(
         <StyledToastContainer position={position}>
           {toasts.map((t, i) => (
             <Toast
-              key={i}
+              key={t.id}
               content={t.content}
               variant={t.variant}
               autoCloseTime={t.autoCloseTime}

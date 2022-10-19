@@ -1,5 +1,5 @@
 import styled, { CSSObject } from "@emotion/styled";
-import { cardProps } from "../Card.props";
+import { CardMediaProps } from "../Card.props";
 
 type enumStyles = Record<string, CSSObject>;
 
@@ -16,4 +16,4 @@ const baseStyling: CSSObject = {
   "&:hover": { transform: "scale(.95)" },
 };
 
-export const StyledToast = styled.div<cardProps>(baseStyling);
+export const StyledToast = styled.div<CardMediaProps>(baseStyling);

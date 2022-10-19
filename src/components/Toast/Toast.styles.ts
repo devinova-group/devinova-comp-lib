@@ -15,6 +15,7 @@ const baseStyling: CSSObject = {
   alignItems: "center",
   boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
   "&:hover": { transform: "scale(.95)" },
+  // "&:after": { content: "\00d7"}
 };
 
 const variants: enumStyles = {
