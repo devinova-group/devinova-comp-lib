@@ -27,7 +27,9 @@ export const buttonVariant: EnumStyles = {
     color:colorPalette.Text.White,
     backgroundColor: colorPalette.DeviDaisy[500],
     boxShadow: "5px 10px 20px rgba(0,0,0,0.25)",
-    
+    "&:active": {
+      backgroundColor: "#4C3A80",
+    },
   },
   error: {
     color: colorPalette.Text.White,
