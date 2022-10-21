@@ -16,7 +16,6 @@ const Button = ({
   children,
   isFullWidth,
   isHover,
-  hasIcon,
   iconName,
   }:  ButtonOption,
   ) => {
@@ -31,7 +30,6 @@ const Button = ({
         onClick={onClick}
         isFullWidth={isFullWidth}
         isHover={isHover}
-        hasIcon={hasIcon}
         iconName={iconName}
         className={css({
           [`:hover .icon`]:{
@@ -53,7 +51,6 @@ const Button = ({
         onClick={onClick}
         isFullWidth={isFullWidth}
         isHover={isHover}
-        hasIcon={hasIcon}
         iconName={iconName}
         >
         <Icon name={iconName}  className="icon"/>
@@ -68,7 +65,6 @@ const Button = ({
         style={style}
         className={className}
         onClick={onClick}
-        hasIcon={hasIcon}
         isFullWidth={isFullWidth}
         isHover={isHover}
         >

@@ -1,4 +1,4 @@
-import Icon from "../SvgIcons/SvgIcon";
+import Icon from "../SvgIcons/Icon.component";
 import Loading from "./Loading.component.styles";
 import {useState, useEffect } from "react";
 import { loadingProps } from "./Loading.component.types";
@@ -16,7 +16,7 @@ export function LoadSuccess ({ speed, style}: loadingProps){
     if(loading ){
         return (<Loading speed={speed} style={style} />)
     }     return(
-        <Icon iconName="successLoading" />
+        <Icon name="SuccessLoading" />
     );
 }
 
