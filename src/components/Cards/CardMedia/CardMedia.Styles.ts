@@ -16,4 +16,6 @@ const baseStyling: CSSObject = {
   "&:hover": { transform: "scale(.95)" },
 };
 
-export const StyledToast = styled.div<CardMediaProps>(baseStyling);
+export const StyledCardMedia = styled.img<CardMediaProps>`
+  height: ${(props) => props.height}px;
+`;

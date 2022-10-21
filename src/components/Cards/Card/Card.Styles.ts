@@ -5,7 +5,7 @@ import { CardProps } from "../Card.props";
 export const Card = styled.div<CardProps>`
   box-sizing: border-box;
   position: relative;
-  height: 280px;
+  min-height: 280px;
   width: 350px;
   background-color: ${(props) =>
     props.dark

@@ -23,9 +23,12 @@ export interface CardHeaderProps {
 
 export interface CardMediaProps {
   style?: CSSProperties;
-  height: number;
-  src: string;
-  component: ElementType;
+  height?: number;
+  width?: number;
+  image?: string;
+  src?: string;
+  alt?: string;
+  component?: "video" | "audio" | "iframe" | "img";
 }
 
 export interface CollapseProps {
