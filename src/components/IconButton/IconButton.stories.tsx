@@ -1,7 +1,7 @@
 import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import IconButton from "./IconButton";
-import { Plus } from "../../../IconAssets";
+import IconButton from "./IconButton.component";
+
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
