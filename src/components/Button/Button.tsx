@@ -1,30 +1,14 @@
-import React from "react";
-import { css } from "@emotion/css";
-import { typography } from "../../theme";
+import {typography} from "../../theme";
+import styled from "@emotion/styled";
 
 const color = "white";
 
-export interface ButtonProps {
-  label: string;
-}
-
-const Button = (props: ButtonProps) => {
-  return (
-    <button
-      className={css`
-        padding: 32px;
-        background-color: hotpink;
-        font-size: 24px;
-        border-radius: 4px;
-        font-family: ${typography.Neucha};
-        &:hover {
-          color: ${color};
-        }
-      `}
-    >
-      {props.label}
-    </button>
-  );
-};
-
-export default Button;
+export const Button = styled.button`
+padding: 32px;
+background-color: hotpink;
+font-size: 24px;
+border-radius: 4px;
+font-family: ${typography.Neucha};
+&:hover {
+  color: ${color};
+`;

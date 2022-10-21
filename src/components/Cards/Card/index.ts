@@ -1,1 +1,1 @@
-export * from "./Card.Styles";
+export {Card} from "./Card.Styles";

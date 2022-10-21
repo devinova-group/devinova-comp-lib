@@ -1,1 +1,1 @@
-export * from "./CardMedia";
+export {CardMedia} from "./CardMedia";

@@ -1,1 +1,1 @@
-export * from "./CardHeader";
+export {CardHeader} from "./CardHeader";
