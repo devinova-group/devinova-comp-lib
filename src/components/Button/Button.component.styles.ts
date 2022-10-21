@@ -88,7 +88,6 @@ positive:{
 
 const buttonSize: EnumStyles = {
   small: {
-    margin:"auto",
     width:"103px",
     height:"35px",
     fontFamily: typography.Quicksand,
@@ -99,7 +98,6 @@ const buttonSize: EnumStyles = {
     borderRadius: "4px",
   },
   medium: {
-    margin:"auto",
     width:"150px",
     height:"50px",
     fontFamily: typography.Quicksand,
@@ -110,7 +108,6 @@ const buttonSize: EnumStyles = {
     borderRadius: "6px",
   },
   large: {
-    margin:"auto",
     width:"257px",
     height:"73px",
     fontFamily: typography.Quicksand,

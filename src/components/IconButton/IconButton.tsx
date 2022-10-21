@@ -1,6 +1,6 @@
 import React from "react";
 import Button from "../Button";
-import Icon from "../SvgIcons/SvgIcon";
+import Icon from "../SvgIcons/Icon.component";
 import { css } from "@emotion/css";
 import { buttonVariant } from "../Button/Button.component.styles";
 
@@ -79,7 +79,7 @@ variant={variant}
 
 <Icon 
 className="icon" 
-iconName={iconName}
+name={iconName}
 color={color}
 />  
 </Button>}
@@ -108,7 +108,7 @@ isHover
 
 <Icon 
 className="icon" 
-iconName={iconName}
+name={iconName}
 color={color}
 />  
 </Button>}
@@ -132,7 +132,7 @@ disabled = {isDisabled}
 
 <Icon 
 className="icon" 
-iconName={iconName}
+name={iconName}
 color={color}
 />  
 </Button>}

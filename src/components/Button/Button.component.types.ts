@@ -12,7 +12,6 @@ export interface ButtonOption  {
     className?: string;
     style?: React.CSSProperties;
     children: React.ReactNode;
-    hasIcon?:boolean;
     iconName?: string;
     isHover?:boolean;
 }

@@ -1,7 +1,7 @@
 import { ButtonOption } from "./Button.component.types";
 import { ButtonComponent } from "./Button.component.styles";
 import React from "react";
-import Icon from "../SvgIcons/SvgIcon";
+import Icon from "../SvgIcons/Icon.component";
 import { css } from "@emotion/css";
 import { buttonVariant } from "./Button.component.styles";
 
@@ -22,7 +22,7 @@ const Button = ({
   ) => {
       return(
         <>
-  {   hasIcon && isHover && 
+  {   typeof iconName =="string" && isHover && 
       <ButtonComponent
         variant = {variant}
         disabled={disabled}
@@ -41,10 +41,10 @@ const Button = ({
         })
         } 
         >
-        <Icon className="icon" color="white" iconName={iconName}/>
+        <Icon name={iconName} className="icon"/>
         {children}
         </ButtonComponent> }
-  {   hasIcon && !isHover && 
+  {   typeof iconName =="string" && !isHover && 
       <ButtonComponent
         variant = {variant}
         disabled={disabled}
@@ -56,11 +56,11 @@ const Button = ({
         hasIcon={hasIcon}
         iconName={iconName}
         >
-        <Icon className="icon" color="white" iconName={iconName}/>
+        <Icon name={iconName}  className="icon"/>
         {children}
         </ButtonComponent> }   
   
-  {     !hasIcon && 
+  {     typeof iconName !=="string" && 
         <ButtonComponent
         variant = {variant}
         disabled={disabled}
