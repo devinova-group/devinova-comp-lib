@@ -1,44 +1,36 @@
 import React, { Children } from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import Button from "./Button.component";
+
+import Badge from "./badge.component";
+import { badgeVariant } from "./badge.component.styles";
 
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: "ReactComp/Button",
-  component: Button,
+  title: "ReactComp/Badge",
+  component: Badge,
   argTypes:{
     variant:{
-      options:['primary', 'error', 'positive'],
+      options:['Active', 'InActive', 'Error', 'Disabled', 'Primary', 'Secondary', 'Default', 'Selected'],
       control:  {type: 'radio'}
-    },
-    size:{
-      options:['small', 'medium', 'large'],
-      control:  {type: 'radio'}
-    },
-    
+    }
   }
-} as ComponentMeta<typeof Button>;
+} as ComponentMeta<typeof Badge>;
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-const Template: ComponentStory<typeof Button> = (args) => 
-<Button {...args} >
- 
-</Button>  
-  ;
+const Template: ComponentStory<typeof Badge> = (args) => <Badge {...args} />;
 
 export const Primary = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
 Primary.args = {
-  variant:"primary",
-  children:"button",
-  size:"medium",
-  iconName:"dollar",
-  disabled:false,
-  isHover:false,
+  variant:
+   'Active'
+  ,
+  children:"children",
+   
 };
 
 export const ClickMe = Template.bind({});
 ClickMe.args = {
-  size:"large",
+
 };
