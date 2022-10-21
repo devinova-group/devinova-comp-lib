@@ -1,22 +1,35 @@
-import { TextfieldOption } from "./Textfield.props"
+import { TextfieldOption, variantMapping } from "./Textfield.props"
 import TextfieldComponent from "./Textfield.styles"
 import React from "react";
+import { FaGithub } from 'react-icons/fa'
 
-const Textfield = ({
+const Textfield: React.FC<TextfieldOption> = ({
   variant,
-  size,
+  as,
+  inputSize,
   disabled,
   className,
   style,
-  }:  TextfieldOption ) => {
+  type,
+}) => {
+  let Tag;
+  if (!as && variantMapping[variant as keyof typeof variantMapping]) {
+    let element = variantMapping[variant as keyof typeof variantMapping];
+    Tag = element;
+  } else {
+    Tag = as ? as : "";
+  }
   
     return(
   <TextfieldComponent
+  as={Tag}
   variant = {variant}
   disabled={disabled}
-  size={size}
+  inputSize={inputSize}
   style={style}
   className={className}
+  type={type}
+  placeholder="Placeholder text"
   >
   </TextfieldComponent>
     );

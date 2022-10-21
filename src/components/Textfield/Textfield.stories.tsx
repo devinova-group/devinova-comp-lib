@@ -9,26 +9,28 @@ export default {
 
 const Template: ComponentStory<typeof Textfield> = (args) => <Textfield {...args} />;
 
-export const Primary = Template.bind({});
-Primary.args = {
+export const textfield = Template.bind({});
+textfield.args = {
   variant:"primary",
-  size: "medium",
+  inputSize: "medium",
+  type: 'text'
 };
-
-export const Error = Template.bind({});
-Error.args = {
-  variant:"error",
-  size: "small"
+export const disabled = Template.bind({});
+disabled.args = {
+  variant:"primary",
+  inputSize: "medium",
+  type: 'text',
+  disabled: true
 };
-
-export const Border = Template.bind({});
-Border.args = {
-  variant:"border",
-  size: "large"
+export const search = Template.bind({});
+search.args = {
+  variant:"primary",
+  inputSize: "medium",
+  type: 'search',
 };
-
-export const Filled = Template.bind({});
-Filled.args = {
-  variant:"filled",
-  size: "medium"
+export const textarea = Template.bind({});
+textarea.args = {
+  variant:"textarea",
+  inputSize: "medium",
+  as: "textarea"
 };
