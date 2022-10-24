@@ -1,6 +1,6 @@
-import styled, { CSSObject } from "@emotion/styled";
-import { colorPalette } from "../../theme";
-import { toastProps } from "./Toast.props";
+import styled, {CSSObject} from "@emotion/styled";
+import {colorPalette} from "../../theme";
+import {toastProps} from "./Toast.props";
 
 type enumStyles = Record<string, CSSObject>;
 
@@ -14,8 +14,7 @@ const baseStyling: CSSObject = {
   justifyContent: "center",
   alignItems: "center",
   boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
-  "&:hover": { transform: "scale(.95)" },
-  // "&:after": { content: "\00d7"}
+  "&:hover": {transform: "scale(.95)"},
 };
 
 const variants: enumStyles = {
@@ -66,6 +65,6 @@ const variants: enumStyles = {
   },
 };
 
-const toastVariant = ({ variant = "default" }: toastProps) => variants[variant];
+const toastVariant = ({variant = "success"}: toastProps) => variants[variant];
 
 export const StyledToast = styled.div<toastProps>(toastVariant, baseStyling);
