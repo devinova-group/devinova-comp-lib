@@ -4,7 +4,6 @@ import {CardContent} from "./CardContent";
 import {CardHeader} from "./CardHeader";
 import {CardMedia} from "./CardMedia";
 import {Collapse} from "./Collapse";
-import {Button} from "../Button";
 
 const image = {
   src: "/components/Cards/CardMedia/testing.jpg",
