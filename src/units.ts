@@ -1,4 +1,5 @@
-export const spacing = {
+export const units = {
+  spacing: {
     none: 0,
     d0: '0.25rem',
     d1: '0.5rem',
@@ -23,5 +24,6 @@ export const spacing = {
     d20: '4.5rem',
     d21: '4.875rem',
     d22: '5rem',
+  }
   };
   

@@ -1,44 +1,33 @@
-import React, { Children } from "react";
+import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import Button from "./Button.component";
+import IconButton from "./IconButton.component";
 
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: "ReactComp/Button",
-  component: Button,
+  title: "ReactComp/IconButton",
+  component: IconButton,
   argTypes:{
     variant:{
       options:['primary', 'error', 'positive'],
       control:  {type: 'radio'}
     },
-    size:{
-      options:['small', 'medium', 'large'],
-      control:  {type: 'radio'}
-    },
-    
   }
-} as ComponentMeta<typeof Button>;
+} as ComponentMeta<typeof IconButton>;
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-const Template: ComponentStory<typeof Button> = (args) => 
-<Button {...args} >
- 
-</Button>  
-  ;
+const Template: ComponentStory<typeof IconButton> = (args) => <IconButton 
+{...args} > 
+
+</IconButton>
+;
 
 export const Primary = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
 Primary.args = {
   variant:"primary",
-  children:"button",
   size:"medium",
-  iconName:"dollar",
-  disabled:false,
-  isHover:false,
+  color:"white",
+
 };
 
-export const ClickMe = Template.bind({});
-ClickMe.args = {
-  size:"large",
-};
