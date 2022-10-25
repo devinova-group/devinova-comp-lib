@@ -4,6 +4,14 @@ import {CollapseProps} from "../Card.props";
 import {CollapseDiv} from "./Collapse.Styles";
 import {CollapsedDiv} from "./Collapsed.styles";
 
+const centerOpenIcon = css`
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+`;
+
 export const Collapse = ({
   children,
   title,
@@ -16,13 +24,7 @@ export const Collapse = ({
     <CollapseDiv orientation={orientation} style={style} width={width}>
       {children}
       <a
-        className={css`
-          cursor: pointer;
-          position: absolute;
-          right: 0;
-          top: 50%;
-          transform: translateY(-50%);
-        `}
+        className={centerOpenIcon}
         onClick={() => {
           setOpen(false);
         }}
@@ -34,11 +36,7 @@ export const Collapse = ({
     <CollapsedDiv orientation={orientation} style={style} width={width}>
       {title}
       <a
-        className={css`
-          cursor: pointer;
-          position: absolute;
-          right: 0;
-        `}
+        className={centerOpenIcon}
         onClick={() => {
           setOpen(true);
         }}

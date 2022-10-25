@@ -1,4 +1,4 @@
-import styled, {CSSObject} from "@emotion/styled";
+import styled from "@emotion/styled";
 import {CollapseProps} from "../Card.props";
 
 export const CollapseDiv = styled.div<CollapseProps>`
