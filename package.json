@@ -1,6 +1,6 @@
 {
   "name": "@devinovastudio/devinova-comp-lib",
-  "version": "0.0.15",
+  "version": "0.0.16",
   "description": "Devinova React Component Library test",
   "scripts": {
     "rollup": "rollup -c",
