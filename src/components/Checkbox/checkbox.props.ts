@@ -1,22 +1,22 @@
-import { ComponentWithClass } from './utils/class'
-import { InputValidationProps } from './utils/input'
-import { CheckboxRadioVariantType } from './utils/types'
+import {ComponentWithClass} from "./utils/class";
+import {InputValidationProps} from "./utils/input";
+import {CheckboxRadioVariantType} from "./utils/types";
 
 export interface CheckboxRootProps extends React.HTMLAttributes<HTMLElement> {
-  $hasContainer?: boolean
-  $isDisabled?: boolean
-  $isInvalid?: boolean
-  $isChecked?: boolean
-  className?: string
+  $hasContainer?: boolean;
+  $isDisabled?: boolean;
+  $isInvalid?: boolean;
+  $isChecked?: boolean;
+  className?: string;
 }
 
 export interface CheckmarkProps {
-  $hasContainer?: boolean
-  $isDisabled?: boolean
+  $hasContainer?: boolean;
+  $isDisabled?: boolean;
 }
 
 export interface CheckmarkWrapperProps {
-  $hasContainer: boolean
+  $hasContainer: boolean;
 }
 
 export interface CheckboxRadioBaseProps
@@ -25,58 +25,57 @@ export interface CheckboxRadioBaseProps
   /**
    * Optional unique ID to apply to the component.
    */
-  id?: string
+  id?: string;
   /**
    * Optional description to display below the label.
    */
-  description?: React.ReactNode
+  description?: React.ReactNode;
   /**
    * Toggles whether or not to the component is initially marked as checked.
    */
-  defaultChecked?: boolean
+  defaultChecked?: boolean;
   /**
    * Toggles whether or not the component is marked as checked.
    */
-  checked?: boolean
+  checked?: boolean;
   /**
    * Toggles whether the component is disabled or not (preventing user interaction).
    */
-  isDisabled?: boolean
+  isDisabled?: boolean;
   /**
    * Label to display to the right of the component.
    */
-  label: string
+  label?: string;
   /**
    * HTML `name` attribute associated with the component.
    */
-  name: string
+  name?: string;
   /**
    * Optional handler to be invoked when the value of the component changes.
    */
-  onChange?: (event: React.FormEvent<HTMLInputElement>) => void
+  onChange?: (event: React.FormEvent<HTMLInputElement>) => void;
   /**
    * Optional handler to be invoked when the blur event is emitted.
    */
-  onBlur?: (event: React.FormEvent<HTMLInputElement>) => void
+  // onBlur?: (event: React.FormEvent<HTMLInputElement>) => void;
   /**
    * Optional HTML `value` attribute associated with the component.
    */
-  value?: string
+  value?: string;
   /**
    * Optional variant to set container visibility.
    */
-  variant?: CheckboxRadioVariantType
+  variant?: CheckboxRadioVariantType;
   /**
    * HTML `type` attribute associated with the input (Checkbox or Radio).
    */
-  type: 'checkbox' | 'radio'
+  type: "checkbox" | "radio";
   /**
    * Custom implementations of presentational styled-components.
    */
   partials: {
-    Root: React.ComponentType<CheckboxRootProps>
-    Checkmark: React.ComponentType<CheckmarkProps>
-    CheckmarkWrapper: React.ComponentType<CheckmarkWrapperProps>
-  }
+    Root: React.ComponentType<CheckboxRootProps>;
+    Checkmark: React.ComponentType<CheckmarkProps>;
+    CheckmarkWrapper: React.ComponentType<CheckmarkWrapperProps>;
+  };
 }
-  
