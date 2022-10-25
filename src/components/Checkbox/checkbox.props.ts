@@ -55,10 +55,6 @@ export interface CheckboxRadioBaseProps
    */
   onChange?: (event: React.FormEvent<HTMLInputElement>) => void;
   /**
-   * Optional handler to be invoked when the blur event is emitted.
-   */
-  // onBlur?: (event: React.FormEvent<HTMLInputElement>) => void;
-  /**
    * Optional HTML `value` attribute associated with the component.
    */
   value?: string;

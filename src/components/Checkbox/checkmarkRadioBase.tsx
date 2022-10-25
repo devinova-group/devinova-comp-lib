@@ -25,7 +25,6 @@ export const CheckboxRadioBase = React.forwardRef<
       label,
       name,
       onChange,
-      // onBlur,
       variant = CHECKBOX_RADIO_VARIANT.DEFAULT,
       value,
       type,
@@ -127,7 +126,6 @@ export const CheckboxRadioBase = React.forwardRef<
                   name={name}
                   value={value}
                   onChange={handleOnChange}
-                  // onBlur={onBlur}
                   disabled={isDisabled}
                   checked={isControlled ? isChecked : undefined}
                   {...rest}
