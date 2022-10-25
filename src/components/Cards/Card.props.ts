@@ -1,5 +1,5 @@
-import { ElementType, ReactNode, CSSProperties } from "react";
-import { variantMapping } from "../Typography/typography.component.props";
+import {ElementType, ReactNode, CSSProperties} from "react";
+import {variantMapping} from "../Typography/typography.component.props";
 
 export interface CardProps {
   style?: CSSProperties;
@@ -34,6 +34,8 @@ export interface CardMediaProps {
 export interface CollapseProps {
   style?: CSSProperties;
   children?: ReactNode | never;
-  in?: boolean;
+  title?: ReactNode | string | never;
   orientation?: "horizontal" | "vertical";
+  open?: boolean;
+  width: number;
 }

@@ -1,27 +1,50 @@
-// import { useEffect, useRef, useState } from "react";
+import {css} from "@emotion/css";
+import React, {useEffect, useRef, useState} from "react";
+import {CollapseProps} from "../Card.props";
+import {CollapseDiv} from "./Collapse.Styles";
+import {CollapsedDiv} from "./Collapsed.styles";
 
-// interface Props {
-//   toggleAccordion: boolean;
-//   children: React.ReactNode;
-// }
-// const Accordion = ({ toggleAccordion, children }: Props) => {
-//   const [height, setHeight] = useState("0px");
-//   const content = useRef(null);
-//   useEffect(() => {
-//     setHeight(toggleAccordion ? ${content.current.scrollHeight}px : "0px");
-//   }, [toggleAccordion]);
-//   return (
-//     <div
-//       ref={content}
-//       sx={{
-//         maxHeight: height,
-//         overflow: "hidden",
-//         transition: "max-height 0.6s ease",
-//       }}
-//     >
-//       {children}
-//     </div>
-//   );
-// };
-
-// export default Accordion;
+export const Collapse = ({
+  children,
+  title,
+  orientation,
+  width,
+  style,
+}: CollapseProps) => {
+  const [open, setOpen] = useState(false);
+  return open ? (
+    <CollapseDiv orientation={orientation} style={style} width={width}>
+      {children}
+      <a
+        className={css`
+          cursor: pointer;
+          position: absolute;
+          right: 0;
+          top: 50%;
+          transform: translateY(-50%);
+        `}
+        onClick={() => {
+          setOpen(false);
+        }}
+      >
+        Close
+      </a>
+    </CollapseDiv>
+  ) : (
+    <CollapsedDiv orientation={orientation} style={style} width={width}>
+      {title}
+      <a
+        className={css`
+          cursor: pointer;
+          position: absolute;
+          right: 0;
+        `}
+        onClick={() => {
+          setOpen(true);
+        }}
+      >
+        Open
+      </a>
+    </CollapsedDiv>
+  );
+};

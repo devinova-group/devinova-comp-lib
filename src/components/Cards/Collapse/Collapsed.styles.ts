@@ -1,7 +1,7 @@
 import styled, {CSSObject} from "@emotion/styled";
 import {CollapseProps} from "../Card.props";
 
-export const CollapseDiv = styled.div<CollapseProps>`
+export const CollapsedDiv = styled.div<CollapseProps>`
   box-sizing: border-box;
   padding-right: 2rem;
   position: relative;

@@ -1,10 +1,8 @@
-import React, { useRef } from "react";
-import { ComponentStory, ComponentMeta } from "@storybook/react";
+import React, {useRef} from "react";
+import {ComponentStory, ComponentMeta} from "@storybook/react";
 
-import { Card } from "./Card";
-import { CardContent } from "./CardContent";
-import { CardHeader } from "./CardHeader";
-import { CardMedia } from "./CardMedia";
+import {CardTest} from "./CardTest";
+import {Card} from "./Card";
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
@@ -12,30 +10,9 @@ export default {
   component: Card,
 } as ComponentMeta<typeof Card>;
 
-const image = {
-  src: "/components/Cards/CardMedia/testing.jpg",
-};
-
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-const Template: ComponentStory<typeof Card> = (args) => (
-  <Card {...args}>
-    <CardHeader
-      title="testing"
-      subheader="123"
-      titleTypographyProps="h1Neucha"
-    />
-    <CardMedia
-      component="iframe"
-      height={151}
-      width={151}
-      src={image.src}
-      alt="Live from space album cover"
-    />
-    <CardContent>
-      <div>test</div>
-      <div>test</div>
-    </CardContent>
-  </Card>
+const Template: ComponentStory<typeof CardTest> = (args) => (
+  <CardTest {...args} />
 );
 
 export const Raised = Template.bind({});
