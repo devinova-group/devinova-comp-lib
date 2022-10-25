@@ -1,5 +1,6 @@
 import {css} from "@emotion/css";
 import React, {useEffect, useRef, useState} from "react";
+import {ChevronDown, ChevronUp} from "../..";
 import {CollapseProps} from "../Card.props";
 import {CollapseDiv} from "./Collapse.Styles";
 import {CollapsedDiv} from "./Collapsed.styles";
@@ -23,26 +24,24 @@ export const Collapse = ({
   return open ? (
     <CollapseDiv orientation={orientation} style={style} width={width}>
       {children}
-      <a
+      <ChevronUp
+        height={24}
         className={centerOpenIcon}
         onClick={() => {
           setOpen(false);
         }}
-      >
-        Close
-      </a>
+      />
     </CollapseDiv>
   ) : (
     <CollapsedDiv orientation={orientation} style={style} width={width}>
       {title}
-      <a
+      <ChevronDown
+        height={24}
         className={centerOpenIcon}
         onClick={() => {
           setOpen(true);
         }}
-      >
-        Open
-      </a>
+      />
     </CollapsedDiv>
   );
 };
