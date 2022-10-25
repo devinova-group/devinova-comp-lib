@@ -1,10 +1,12 @@
-import React, { forwardRef, useImperativeHandle, useState } from "react";
+
+import React, {forwardRef, useImperativeHandle, useState} from "react";
 import ReactDOM from "react-dom";
-import { useToastAutoClose, useToastPortal } from "../../hooks";
-import { toastProps } from "./Toast.props";
-import { Toast } from "./Toast";
-import { uuid } from "../../shared";
-import { StyledToastContainer } from "./ToastContainer";
+import {useToastAutoClose, useToastPortal} from "../../hooks";
+import {toastProps} from "./Toast.props";
+import {Toast} from "./Toast";
+import {uuid} from "../../shared";
+import {StyledToastContainer} from "./ToastContainer";
+
 
 export interface portal {
   position?: string;
@@ -18,9 +20,10 @@ interface RefAtts {
 }
 
 const ToastPortal = forwardRef<RefAtts, portal>(
-  ({ autoClose = true, autoCloseTime = 10000, position }, ref) => {
+  ({autoClose = true, autoCloseTime = 10000, position = "top-right"}, ref) => {
     const [toasts, setToasts] = useState<toastProps[]>([]);
-    const { loaded, portalId } = useToastPortal();
+    const {loaded, portalId} = useToastPortal();
+
 
     useToastAutoClose({
       toasts,
@@ -52,7 +55,7 @@ const ToastPortal = forwardRef<RefAtts, portal>(
         <StyledToastContainer position={position}>
           {toasts.map((t, i) => (
             <Toast
-              key={i}
+              key={t.id}
               content={t.content}
               variant={t.variant}
               autoCloseTime={t.autoCloseTime}
