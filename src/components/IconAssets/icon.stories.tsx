@@ -2,6 +2,8 @@ import React from "react";
 import {ComponentStory, ComponentMeta} from "@storybook/react";
 
 import {
+  Login,
+  Logout,
   Eject,
   Audio,
   Badge,
@@ -34,6 +36,8 @@ export default {
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
 const Template: ComponentStory<typeof Eject> = (args) => (
   <>
+    <Logout />
+    <Login {...args} />
     <Eject {...args} />
     <Audio {...args} />
     <Badge {...args} />

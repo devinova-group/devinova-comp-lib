@@ -1,13 +1,13 @@
 import * as React from "react";
-import { SVGProps } from "react";
+import {SVGProps} from "react";
 
-const SvgErrorLoading = (props: SVGProps<SVGSVGElement>) => (
+export const ErrorLoading = (props: SVGProps<SVGSVGElement>) => (
   <svg
     viewBox="0 0 64 64"
-    fill="none"
+    fill={props.fill ? props.fill : "black"}
     xmlns="http://www.w3.org/2000/svg"
     role="img"
-    {...props}
+    height={props.height ? props.height : 24}
   >
     <path
       d="M64 32c0 17.673-14.327 32-32 32C14.327 64 0 49.673 0 32 0 14.327 14.327 0 32 0c17.673 0 32 14.327 32 32ZM9.88 32c0 12.216 9.904 22.12 22.12 22.12 12.216 0 22.12-9.904 22.12-22.12 0-12.216-9.904-22.12-22.12-22.12C19.784 9.88 9.88 19.784 9.88 32Z"
@@ -30,5 +30,3 @@ const SvgErrorLoading = (props: SVGProps<SVGSVGElement>) => (
     </defs>
   </svg>
 );
-
-export default SvgErrorLoading;

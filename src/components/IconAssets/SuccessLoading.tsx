@@ -1,13 +1,13 @@
 import * as React from "react";
-import { SVGProps } from "react";
+import {SVGProps} from "react";
 
-const SvgSuccessLoading = (props: SVGProps<SVGSVGElement>) => (
+export const SuccessLoading = (props: SVGProps<SVGSVGElement>) => (
   <svg
     viewBox="0 0 64 64"
-    fill="none"
+    fill={props.fill ? props.fill : "black"}
     xmlns="http://www.w3.org/2000/svg"
     role="img"
-    {...props}
+    height={props.height ? props.height : 24}
   >
     <g filter="url(#successLoading_svg__a)">
       <path
@@ -80,5 +80,3 @@ const SvgSuccessLoading = (props: SVGProps<SVGSVGElement>) => (
     </defs>
   </svg>
 );
-
-export default SvgSuccessLoading;
