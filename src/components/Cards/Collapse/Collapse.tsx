@@ -1,5 +1,5 @@
 import {css} from "@emotion/css";
-import React, {useEffect, useRef, useState} from "react";
+import React, {useState} from "react";
 import {ChevronDown, ChevronUp} from "../..";
 import {CollapseProps} from "../Card.props";
 import {CollapseDiv} from "./Collapse.Styles";

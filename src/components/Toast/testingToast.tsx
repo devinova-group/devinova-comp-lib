@@ -1,5 +1,5 @@
-import React, { useRef } from "react";
-import ToastPortal from "./ToastPortal";
+import React, {useRef} from "react";
+import {ToastPortal} from "./ToastPortal";
 
 export interface testingProps {
   content?: string;

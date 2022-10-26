@@ -1,7 +1,7 @@
 import React from "react";
-import Typography from "../../Typography";
-import { CardHeaderProps } from "../Card.props";
-import { StyledCardHeader } from "./CardHeader.Styles";
+import {Typography} from "../../Typography";
+import {CardHeaderProps} from "../Card.props";
+import {StyledCardHeader} from "./CardHeader.Styles";
 
 export const CardHeader = ({
   title,
