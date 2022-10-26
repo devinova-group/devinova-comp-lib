@@ -1,12 +1,12 @@
 import React from "react";
-import {  Label, Radio } from "./inputStyles";
+import {Label, Radio} from "./inputStyles";
 import styled from "@emotion/styled/macro";
-import { InputElementProps } from "./radio.props";
+import {InputElementProps} from "./radio.props";
 
 const Wrapper = styled.div`
-   display: flex;
-   gap: 0.5rem;
-   align-items: center;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
 `;
 
 export const RadioButton = React.forwardRef<
@@ -14,37 +14,20 @@ export const RadioButton = React.forwardRef<
   InputElementProps
 >(
   (
-    {
-        id,
-        label,
-        disabled,
-        value,
-        type,
-        key,
-        onChange,
-        variant,
-        ...rest
-    },
+    {id, label, disabled, value, type, key, onChange, variant, ...rest},
     ref
   ) => {
-
     return (
-        <Wrapper key={key}>
-           <Radio
-             type="radio" 
-             id="radio-button" 
-             disabled={disabled} 
-             {...rest}
-             onChange={onChange} 
-             
-          />
-           <Label  disabled={disabled}>
-          {label}
-            
-           </Label>
-        </Wrapper>
+      <Wrapper key={key}>
+        <Radio
+          type="radio"
+          id="radio-button"
+          disabled={disabled}
+          {...rest}
+          onChange={onChange}
+        />
+        <Label disabled={disabled}>{label}</Label>
+      </Wrapper>
     );
- }
+  }
 );
- 
- export default RadioButton;

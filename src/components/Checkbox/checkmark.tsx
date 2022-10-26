@@ -1,17 +1,15 @@
 import styled from "@emotion/styled/macro";
-import { colorPalette } from '../../theme';
-import { typography } from "../../theme";
-import { CheckboxRootProps, CheckmarkProps } from "./checkbox.props";
-import { StyledCheckbox } from "./styledCheckbox";
-import { css } from '@emotion/react'
+import {CheckboxRootProps, CheckmarkProps} from "./checkbox.props";
+import {StyledCheckbox} from "./styledCheckbox";
+import {css} from "@emotion/react";
 
 function getCheckboxActiveStyle() {
-    return css`
-      &::before {
-        box-shadow: 0 0 0 2px transparent;
-      }
-    `
-  }
+  return css`
+    &::before {
+      box-shadow: 0 0 0 2px transparent;
+    }
+  `;
+}
 
 export const StyledCheckmark = styled.span<CheckmarkProps>`
   display: block;
@@ -33,20 +31,20 @@ export const StyledCheckmark = styled.span<CheckmarkProps>`
     display: none;
   }
 
-  ${({ $hasContainer }) => {
+  ${({$hasContainer}) => {
     if ($hasContainer) {
       return css`
         ${StyledCheckbox}:hover &, ${StyledCheckbox}:active & {
           ${getCheckboxActiveStyle()}
         }
-      `
+      `;
     }
 
     return css`
       ${StyledCheckbox}:hover &, ${StyledCheckbox}:active &, ${StyledCheckbox}:focus-within & {
         ${getCheckboxActiveStyle()}
       }
-    `
+    `;
   }}
 
   ${StyledCheckbox} input:checked ~ & {
@@ -62,8 +60,8 @@ export const StyledCheckmark = styled.span<CheckmarkProps>`
 
   ${StyledCheckbox} input:disabled ~ && {
     background-color: transparent;
-    border-color: ${({ $hasContainer }) =>
-      $hasContainer ? 'transparent' : 'transparent'};
+    border-color: ${({$hasContainer}) =>
+      $hasContainer ? "transparent" : "transparent"};
 
     &::before {
       box-shadow: none;
@@ -71,7 +69,6 @@ export const StyledCheckmark = styled.span<CheckmarkProps>`
   }
 
   ${StyledCheckbox} input:disabled:checked ~ && {
-    background-color: ${({ $hasContainer }) =>
-       $hasContainer ? '#AAAAAA' : 'red'
-  }
-`
+    background-color: ${({$hasContainer}) =>
+      $hasContainer ? "#AAAAAA" : "red"}
+`;

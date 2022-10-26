@@ -1,8 +1,8 @@
-import { ValueOf } from './helper'
+import {ValueOf} from "./helper";
 
 export const CHECKBOX_RADIO_VARIANT = {
-  DEFAULT: 'default',
-  NO_CONTAINER: 'no-container',
-} as const
+  DEFAULT: "default",
+  NO_CONTAINER: "no-container",
+} as const;
 
-export type CheckboxRadioVariantType = ValueOf<typeof CHECKBOX_RADIO_VARIANT>
+export type CheckboxRadioVariantType = ValueOf<typeof CHECKBOX_RADIO_VARIANT>;

@@ -1,8 +1,8 @@
 import React from "react";
-import Typography from "../Typography";
-import { ToastDuration } from "./Toast.Styles.Timer";
-import { toastProps } from "./Toast.props";
-import { StyledToast } from "./Toast.styles";
+import {Typography} from "../Typography";
+import {ToastDuration} from "./Toast.Styles.Timer";
+import {toastProps} from "./Toast.props";
+import {StyledToast} from "./Toast.styles";
 
 export const Toast: React.FC<toastProps> = ({
   content,

@@ -1,7 +1,7 @@
 import React from "react";
 import {SVGProps} from "react";
 
-export const Calendar = (props: SVGProps<SVGSVGElement>) => (
+export const Check = (props: SVGProps<SVGSVGElement>) => (
   <svg
     height={props.height ? props.height : 24}
     role="img"

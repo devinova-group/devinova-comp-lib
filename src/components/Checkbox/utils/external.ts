@@ -1,5 +1,5 @@
-import { useMemo } from 'react'
-import { v4 as uuidv4 } from 'uuid'
+import {useMemo} from "react";
+import {v4 as uuidv4} from "uuid";
 
 /**
  * Return a memoised unique ID as a string.
@@ -10,13 +10,13 @@ import { v4 as uuidv4 } from 'uuid'
 export function useExternalId(prefix?: string, externalId?: string): string {
   return useMemo(() => {
     if (externalId) {
-      return externalId
+      return externalId;
     }
 
     if (prefix) {
-      return `${prefix}-${uuidv4()}`
+      return `${prefix}-${uuidv4()}`;
     }
 
-    return uuidv4()
-  }, [externalId, prefix])
+    return uuidv4();
+  }, [externalId, prefix]);
 }

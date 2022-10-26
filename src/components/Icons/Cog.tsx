@@ -1,7 +1,7 @@
 import React from "react";
 import {SVGProps} from "react";
 
-export const Code = (props: SVGProps<SVGSVGElement>) => (
+export const Cog = (props: SVGProps<SVGSVGElement>) => (
   <svg
     height={props.height ? props.height : 24}
     role="img"

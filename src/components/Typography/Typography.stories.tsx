@@ -1,7 +1,7 @@
 import React from "react";
-import { ComponentStory, ComponentMeta } from "@storybook/react";
+import {ComponentStory, ComponentMeta} from "@storybook/react";
 
-import Typography from "./typography.component";
+import {Typography} from "./typography.component";
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
@@ -23,7 +23,7 @@ h1Neucha.args = {
 export const h2QS = Template.bind({});
 h2QS.args = {
   variant: "h2QS",
-  style: { color: "blue" },
+  style: {color: "blue"},
 };
 
 export const NoVariantTest = Template.bind({});

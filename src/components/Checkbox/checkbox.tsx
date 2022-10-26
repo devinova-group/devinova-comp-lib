@@ -1,12 +1,11 @@
-import * as React from 'react';
-import { CheckboxRootProps } from './checkbox.props';
-import { StyledCheckmark } from './checkmark';
-import { CheckboxRadioBase } from './checkmarkRadioBase';
-import { StyledCheckbox } from './styledCheckbox';
-import { CheckboxContainer } from './checkboxContainer';
+import * as React from "react";
+import {CheckboxRootProps} from "./checkbox.props";
+import {StyledCheckmark} from "./checkmark";
+import {CheckboxRadioBase} from "./checkmarkRadioBase";
+import {StyledCheckbox} from "./styledCheckbox";
+import {CheckboxContainer} from "./checkboxContainer";
 
-
-export type CheckboxProps = Omit<CheckboxRootProps, 'type' | 'partials'>
+export type CheckboxProps = Omit<CheckboxRootProps, "type" | "partials">;
 
 export const Checkbox = React.forwardRef<HTMLInputElement, CheckboxRootProps>(
   (props, ref) => {
@@ -20,10 +19,9 @@ export const Checkbox = React.forwardRef<HTMLInputElement, CheckboxRootProps>(
           CheckmarkWrapper: CheckboxContainer,
         }}
         {...props}
-      >
-      </CheckboxRadioBase>
-    )
+      ></CheckboxRadioBase>
+    );
   }
-)
+);
 
-Checkbox.displayName = 'Checkbox'
+Checkbox.displayName = "Checkbox";

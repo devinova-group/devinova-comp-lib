@@ -1,3 +1,3 @@
-export { Toast } from "./Toast";
-export { default as ToastPortal } from "./ToastPortal";
-export { toastProps } from "./Toast.props";
+export * from "./Toast";
+export * from "./ToastPortal";
+export * from "./Toast.props";

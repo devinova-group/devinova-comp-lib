@@ -1,4 +1,4 @@
-import {ElementType, ReactNode, CSSProperties} from "react";
+import {ReactNode, CSSProperties} from "react";
 import {variantMapping} from "../Typography/typography.component.props";
 
 export interface CardProps {

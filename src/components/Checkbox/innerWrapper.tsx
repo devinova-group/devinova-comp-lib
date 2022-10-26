@@ -1,8 +1,8 @@
 import styled from "@emotion/styled/macro";
-import { css } from '@emotion/react'
+import {css} from "@emotion/react";
 
 interface StyledInnerWrapperProps {
-  $hasContainer?: boolean
+  $hasContainer?: boolean;
 }
 
 export const StyledInnerWrapper = styled.div<StyledInnerWrapperProps>`
@@ -15,9 +15,9 @@ export const StyledInnerWrapper = styled.div<StyledInnerWrapperProps>`
     pointer-events: none;
   }
 
-  ${({ $hasContainer }) =>
+  ${({$hasContainer}) =>
     $hasContainer &&
     css`
       min-height: 15px;
     `}
-`
+`;

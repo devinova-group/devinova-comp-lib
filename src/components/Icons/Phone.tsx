@@ -1,7 +1,7 @@
 import * as React from "react";
 import {SVGProps} from "react";
 
-export const Pencil = (props: SVGProps<SVGSVGElement>) => (
+export const Phone = (props: SVGProps<SVGSVGElement>) => (
   <svg
     viewBox="0 0 24 24"
     fill={props.fill ? props.fill : "black"}

@@ -6,4 +6,4 @@ export const StyledInput = styled.input`
   width: 100%;
   opacity: 0;
   cursor: pointer;
-`
+`;

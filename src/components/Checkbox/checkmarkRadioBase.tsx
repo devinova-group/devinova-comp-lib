@@ -1,12 +1,11 @@
 import React, {useRef, useState, useEffect} from "react";
 import mergeRefs from "react-merge-refs";
 import {CHECKBOX_RADIO_VARIANT} from "./utils/types";
-import {CheckboxRadioBaseProps, CheckboxRootProps} from "./checkbox.props";
+import {CheckboxRadioBaseProps} from "./checkbox.props";
 import {CheckboxContainer} from "./checkboxContainer";
 import {StyledInnerWrapper} from "./innerWrapper";
 import {StyledInput} from "./styledInput";
 import {StyledWrapper} from "./wrapper";
-import styled from "@emotion/styled/macro";
 import {StyledLabel} from "./styledLabel";
 import {useExternalId} from "./utils/external";
 

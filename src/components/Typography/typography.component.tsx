@@ -1,8 +1,8 @@
-import { Text } from "./typography.component.styles";
-import { TypographyProps, variantMapping } from "./typography.component.props";
+import {Text} from "./typography.component.styles";
+import {TypographyProps, variantMapping} from "./typography.component.props";
 import React from "react";
 
-const Typography: React.FC<TypographyProps> = ({
+export const Typography: React.FC<TypographyProps> = ({
   variant,
   as,
   children,
@@ -30,5 +30,3 @@ const Typography: React.FC<TypographyProps> = ({
     </Text>
   );
 };
-
-export default Typography;

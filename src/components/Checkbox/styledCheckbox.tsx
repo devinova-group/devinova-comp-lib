@@ -1,47 +1,44 @@
 import styled from "@emotion/styled/macro";
-import { CheckboxRootProps } from "./checkbox.props";
-import { css } from '@emotion/react'
+import {CheckboxRootProps} from "./checkbox.props";
+import {css} from "@emotion/react";
 
-
-
-  export const StyledCheckbox = styled.div<CheckboxRootProps>`
+export const StyledCheckbox = styled.div<CheckboxRootProps>`
   display: inline-flex;
   position: relative;
-  box-shadow: 5px 10px 20px rgba(0,0,0,0.2);
-  padding: ${({ $hasContainer }) =>
+  box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.2);
+  padding: ${({$hasContainer}) =>
     $hasContainer ? `0 4px 4.5px 4.5px` : `0 0 0 20px`};
   font-size: 5px;
   user-select: none;
-  
+
   cursor: pointer;
   * {
     cursor: pointer;
   }
-  
-  ${({ $isInvalid }) =>
+
+  ${({$isInvalid}) =>
     $isInvalid &&
     css`
-      border-color: #4C3A80;
-      box-shadow: 0 0 0 2px #4C3A80;
+      border-color: #4c3a80;
+      box-shadow: 0 0 0 2px #4c3a80;
     `}
 
-  ${({ $hasContainer, $isChecked }) =>
+  ${({$hasContainer, $isChecked}) =>
     $hasContainer &&
     $isChecked &&
     css`
-      background-color: #4C3A80;
+      background-color: #4c3a80;
     `}
 
-  ${({ $hasContainer }) =>
+  ${({$hasContainer}) =>
     $hasContainer &&
     css`
-      border: 3px solid rgba(76,58,128, 0.5);
+      border: 3px solid rgba(76, 58, 128, 0.5);
       border-radius: 2px;
-      &:focus-within,
-     
+      &: focus-within;
     `}
 
-  ${({ $isDisabled, $hasContainer }) =>
+  ${({$isDisabled, $hasContainer}) =>
     $isDisabled &&
     css`
       cursor: not-allowed;
@@ -50,14 +47,11 @@ import { css } from '@emotion/react'
         cursor: not-allowed;
       }
 
-      border-color: #C5C5C5;
+      border-color: #c5c5c5;
 
       ${$hasContainer &&
       css`
-        background-color: #AAAAAA;
+        background-color: #aaaaaa;
       `}
-
-      
-      
     `}
-`
+`;

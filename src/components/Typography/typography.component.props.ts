@@ -55,4 +55,4 @@ export const variantMapping = {
   QSOverline: "span",
 };
 
-export type { TypographyProps, StyledTextProps };
+export type {TypographyProps, StyledTextProps};
