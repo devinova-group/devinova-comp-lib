@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
-import {ModalStyleProps} from "./Modal.props";
+import {DialogStyleProps} from "./Dialog.props";
 
-export const InnerModal = styled.div<ModalStyleProps>`
+export const InnerDialog = styled.div<DialogStyleProps>`
   box-sizing: border-box;
   min-height: 280px;
   width: 350px;

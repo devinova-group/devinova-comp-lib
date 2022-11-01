@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
-import {ModalStyleProps} from "./Modal.props";
+import {DialogStyleProps} from "./Dialog.props";
 
-export const ModalWrapper = styled.div<ModalStyleProps>`
+export const DialogWrapper = styled.div<DialogStyleProps>`
   box-sizing: border-box;
   position: absolute;
   top: 50%;

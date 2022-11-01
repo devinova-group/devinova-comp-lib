@@ -9,3 +9,4 @@ export {RadioButton} from "./Radio";
 export {Textfield} from "./Textfield";
 export {Toast, ToastPortal} from "./Toast";
 export {Typography} from "./Typography";
+export {Dialog} from "./Dialog"
