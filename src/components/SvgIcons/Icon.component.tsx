@@ -1,21 +1,35 @@
-import React, { Component } from "react";
-import { Audio    } from "../IconAssets";
-import { Badge    } from "../IconAssets";
-import { Bold     } from "../IconAssets";
-import { Bolt     } from "../IconAssets";
-import { Bookmark } from "../IconAssets";
-import { Box      } from "../IconAssets";
-import { Brush    } from "../IconAssets";
-import { Delete   } from "../IconAssets";
-import { Dollar   } from "../IconAssets";
-import { Eject    } from "../IconAssets";
-import { Eye      } from "../IconAssets";
-import { Fire     } from "../IconAssets";
-import { Flag     } from "../IconAssets";
-import { Minus    } from "../IconAssets";
-import { Plus     } from "../IconAssets";
-import { ErrorLoading } from "../IconAssets";
-import { SuccessLoading } from "../IconAssets";
+import React from "react";
+import { Audio               } from "../IconAssets";
+import { ArrowBottom         } from "../IconAssets";
+import { ArrowLeft           } from "../IconAssets";
+import { ArrowRight          } from "../IconAssets";
+import { ArrowTop            } from "../IconAssets";
+import { Badge               } from "../IconAssets";
+import { Bold                } from "../IconAssets";
+import { Bolt                } from "../IconAssets";
+import { BookMark            } from "../IconAssets";
+import { Box                 } from "../IconAssets";
+import { Brush               } from "../IconAssets";
+import { Check               } from "../IconAssets";
+import { ChevronBottom       } from "../IconAssets";
+import { ChevronLeft         } from "../IconAssets";
+import { ChevronRight        } from "../IconAssets";
+import { ChevronTop          } from "../IconAssets";
+import { Clock               } from "../IconAssets";
+import { Copywriting         } from "../IconAssets";
+import { Code                } from "../IconAssets";
+import { Delete              } from "../IconAssets";
+import { Dollar              } from "../IconAssets";
+import { Eject               } from "../IconAssets";
+import { Eye                 } from "../IconAssets";
+import { ErrorLoading        } from "../IconAssets";
+import { Fire                } from "../IconAssets";
+import { Flag                } from "../IconAssets";
+import { Menu                } from "../IconAssets";
+import { Minus               } from "../IconAssets";
+import { Plus                } from "../IconAssets";
+import { Share               } from "../IconAssets";
+import { SuccessLoading      } from "../IconAssets";
 
 interface IconType {
     name ?: string;
@@ -50,7 +64,32 @@ return (
             {<Audio name={name} fill={color} width={size != undefined ? iconSize[size].width : 24} height={size != undefined ? iconSize[size].height : 24} style={style} className={className}/>}
             </>
 )}
-else if (name == "Badge " ) {
+else if (name == "ArrowBottom" ) {
+    return (
+            <>
+            {<ArrowBottom  name={name} fill={color} width={size != undefined ? iconSize[size].width : 24} height={size != undefined ? iconSize[size].height : 24} style={style} className={className}/>}
+            </>
+    )}
+else if (name == "ArrowLeft" ) {
+    return (
+            <>
+            {<ArrowLeft  name={name} fill={color} width={size != undefined ? iconSize[size].width : 24} height={size != undefined ? iconSize[size].height : 24} style={style} className={className}/>}
+            </>
+    )}
+else if (name == "ArrowRight" ) {
+    return (
+            <>
+            {<ArrowRight   name={name} fill={color} width={size != undefined ? iconSize[size].width : 24} height={size != undefined ? iconSize[size].height : 24} style={style} className={className}/>}
+            </>
+    )}
+else if (name == "ArrowTop" ) {
+    return (
+            <>
+            {<ArrowTop   name={name} fill={color} width={size != undefined ? iconSize[size].width : 24} height={size != undefined ? iconSize[size].height : 24} style={style} className={className}/>}
+            </>
+    )}
+    
+else if (name == "Badge" ) {
     return (
             <>
             {<Badge  name={name} fill={color} width={size != undefined ? iconSize[size].width : 24} height={size != undefined ? iconSize[size].height : 24} style={style} className={className}/>}
@@ -71,7 +110,7 @@ else if (name == "Bolt" ) {
 else if (name == "Bookmark" ) {
     return (
             <>
-            {<Bookmark name={name} fill={color} width={size != undefined ? iconSize[size].width : 24} height={size != undefined ? iconSize[size].height : 24} style={style} className={className}/>}
+            {<BookMark name={name} fill={color} width={size != undefined ? iconSize[size].width : 24} height={size != undefined ? iconSize[size].height : 24} style={style} className={className}/>}
             </>
     )}
 else if (name == "Box" ) {
@@ -84,6 +123,54 @@ else if (name == "Brush" ) {
     return (
             <>
             {<Brush name={name} fill={color} width={size != undefined ? iconSize[size].width : 24} height={size != undefined ? iconSize[size].height : 24} style={style} className={className}/>}
+            </>
+    )}
+else if (name == "Check" ) {
+    return (
+            <>
+            {<Check name={name} fill={color} width={size != undefined ? iconSize[size].width : 24} height={size != undefined ? iconSize[size].height : 24} style={style} className={className}/>}
+            </>
+    )}
+else if (name == "ChevronBottom" ) {
+    return (
+            <>
+            {<ChevronBottom name={name} fill={color} width={size != undefined ? iconSize[size].width : 24} height={size != undefined ? iconSize[size].height : 24} style={style} className={className}/>}
+            </>
+    )}
+else if (name == "ChevronLeft" ) {
+    return (
+            <>
+            {<ChevronLeft name={name} fill={color} width={size != undefined ? iconSize[size].width : 24} height={size != undefined ? iconSize[size].height : 24} style={style} className={className}/>}
+            </>
+    )}
+else if (name == "ChevronRight" ) {
+    return (
+            <>
+            {<ChevronRight name={name} fill={color} width={size != undefined ? iconSize[size].width : 24} height={size != undefined ? iconSize[size].height : 24} style={style} className={className}/>}
+            </>
+    )}
+else if (name == "ChevronTop" ) {
+    return (
+            <>
+            {<ChevronTop name={name} fill={color} width={size != undefined ? iconSize[size].width : 24} height={size != undefined ? iconSize[size].height : 24} style={style} className={className}/>}
+            </>
+    )}
+else if (name == "Clock" ) {
+    return (
+            <>
+            {<Clock name={name} fill={color} width={size != undefined ? iconSize[size].width : 24} height={size != undefined ? iconSize[size].height : 24} style={style} className={className}/>}
+            </>
+    )}
+else if (name == "Copywriting" ) {
+    return (
+            <>
+            {<Copywriting name={name} fill={color} width={size != undefined ? iconSize[size].width : 24} height={size != undefined ? iconSize[size].height : 24} style={style} className={className}/>}
+            </>
+    )}
+else if (name == "Code" ) {
+    return (
+            <>
+            {<Code name={name} fill={color} width={size != undefined ? iconSize[size].width : 24} height={size != undefined ? iconSize[size].height : 24} style={style} className={className}/>}
             </>
     )}
 else if (name == "Delete" ) {
@@ -128,10 +215,22 @@ else if (name == "Fire" ) {
             {<Fire name={name} fill={color} width={size != undefined ? iconSize[size].width : 24} height={size != undefined ? iconSize[size].height : 24} style={style} className={className}/>}
             </>
     )}
+else if (name == "Menu" ) {
+    return (
+            <>
+            {<Menu name={name} fill={color} width={size != undefined ? iconSize[size].width : 24} height={size != undefined ? iconSize[size].height : 24} style={style} className={className}/>}
+            </>
+    )}
 else if (name == "Minus" ) {
     return (
             <>
             {<Minus name={name} fill={color} width={size != undefined ? iconSize[size].width : 24} height={size != undefined ? iconSize[size].height : 24} style={style} className={className}/>}
+            </>
+    )}
+else if (name == "Share " ) {
+    return (
+            <>
+            {<Share  width={size != undefined ? iconSize[size].width : 64} height={size != undefined ? iconSize[size].height : 64} style={style} className={className}/>}
             </>
     )}
 else if (name == "ErrorLoading" ) {

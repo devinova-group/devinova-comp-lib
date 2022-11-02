@@ -3,12 +3,13 @@ import { ButtonComponent } from "./Button.component.styles";
 import React from "react";
 import Icon from "../SvgIcons/Icon.component";
 import { css } from "@emotion/css";
-import { buttonVariant } from "./Button.component.styles";
+import { buttonHover} from "./Button.component.styles";
 
 
 const Button = ({
   variant,
   onClick,
+  color,
   size,
   disabled,
   className,
@@ -23,7 +24,31 @@ const Button = ({
         <>
   {   typeof iconName =="string" && isHover && 
       <ButtonComponent
+              variant={variant}
+              disabled={disabled}
+              color={color}
+              size={size}
+              style={style}
+              onClick={onClick}
+              isFullWidth={isFullWidth}
+              isHover={isHover}
+              iconName={iconName}
+              className={css({
+                [`.icon`]:{
+                  fill:buttonHover[color].color,
+                },
+                [`&:hover .icon`]: {
+                  display: "inline-flex",
+                  fill: buttonHover[color].backgroundColor,
+                }
+              })}   >
+        <Icon name={iconName} className="icon" size={size}/>
+        {children}
+        </ButtonComponent> }
+  {   typeof iconName =="string" && !isHover && 
+      <ButtonComponent
         variant = {variant}
+        color={color}
         disabled={disabled}
         size={size}
         style={style}
@@ -32,34 +57,19 @@ const Button = ({
         isHover={isHover}
         iconName={iconName}
         className={css({
-          [`:hover .icon`]:{
-            display:"inline-flex",
-            fill: buttonVariant[variant].backgroundColor
-           }
-        })
-        } 
+          [`.icon`]:{
+            fill:buttonHover[color].backgroundColor,
+          }
+        })}
         >
-        <Icon name={iconName} className="icon"/>
-        {children}
-        </ButtonComponent> }
-  {   typeof iconName =="string" && !isHover && 
-      <ButtonComponent
-        variant = {variant}
-        disabled={disabled}
-        size={size}
-        style={style}
-        onClick={onClick}
-        isFullWidth={isFullWidth}
-        isHover={isHover}
-        iconName={iconName}
-        >
-        <Icon name={iconName}  className="icon"/>
+        <Icon name={iconName} className="icon"  size={size}/>
         {children}
         </ButtonComponent> }   
   
   {     typeof iconName !=="string" && 
         <ButtonComponent
         variant = {variant}
+        color={color}
         disabled={disabled}
         size={size}
         style={style}
