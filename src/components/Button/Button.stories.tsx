@@ -1,6 +1,6 @@
 import React, {Children} from "react";
 import {ComponentStory, ComponentMeta} from "@storybook/react";
-import {Button} from "./Button.component";
+import Button from "./Button.component"
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
@@ -8,11 +8,15 @@ export default {
   component: Button,
   argTypes: {
     variant: {
-      options: ["primary", "error", "positive"],
+      options: ["contained", "text", "outlined"],
       control: {type: "radio"},
     },
     size: {
       options: ["small", "medium", "large"],
+      control: {type: "radio"},
+    },
+    color: {
+      options: ["primary", "positive", "error"],
       control: {type: "radio"},
     },
   },
@@ -25,15 +29,11 @@ const Template: ComponentStory<typeof Button> = (args) => (
 export const Primary = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
 Primary.args = {
-  variant: "primary",
+  variant: "outlined",
+  color: "positive",
   children: "button",
   size: "medium",
-  iconName: "dollar",
   disabled: false,
   isHover: false,
 };
 
-export const ClickMe = Template.bind({});
-ClickMe.args = {
-  size: "large",
-};
