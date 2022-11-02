@@ -32,7 +32,7 @@ style
     <MenuItems>
     <MenuItemLinks onClick={onClick}>
     <ItemDiv >
-    <Icon className="icon" name="Book_Mark" color="white"/>  
+    <Icon className="icon" name="Bookmark" color="white"/>  
     </ItemDiv>
     </MenuItemLinks>
     </MenuItems>
