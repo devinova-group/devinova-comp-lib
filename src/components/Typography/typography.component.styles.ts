@@ -1,6 +1,6 @@
-import styled, { CSSObject } from "@emotion/styled";
-import { StyledTextProps, TypographyProps } from "./typography.component.props";
-import { colorPalette, typography } from "../../theme";
+import styled, {CSSObject} from "@emotion/styled";
+import {StyledTextProps, TypographyProps} from "./typography.component.props";
+import {colorPalette, typography} from "../../theme";
 
 type enumStyles = Record<string, CSSObject>;
 
@@ -9,10 +9,10 @@ const baseStyling: CSSObject = {
 };
 
 const alignVariants: enumStyles = {
-  start: { textAlign: "left" },
-  end: { textAlign: "right" },
-  center: { textAlign: "center" },
-  justify: { textAlign: "justify" },
+  start: {textAlign: "left"},
+  end: {textAlign: "right"},
+  center: {textAlign: "center"},
+  justify: {textAlign: "justify"},
 };
 
 const textVariants: enumStyles = {
@@ -282,33 +282,17 @@ const textVariants: enumStyles = {
   },
 };
 
-const colorVariants: enumStyles = {
-  blackRussian: {
-    color: colorPalette.Text.blackRussian,
-  },
-  gray: {
-    color: colorPalette.Text.gray,
-  },
-  black: {
-    color: colorPalette.Text.Black,
-  },
-  white: {
-    color: colorPalette.Text.White,
-  },
-};
-
-const alignText = ({ textAlign = "start" }: StyledTextProps) =>
+const alignText = ({textAlign = "start"}: StyledTextProps) =>
   alignVariants[textAlign];
 
-const textColor = ({ color = "black" }: StyledTextProps) =>
-  colorVariants[color];
-
-const textStyle = ({ variant = "NSBody1" }: StyledTextProps) =>
+const textStyle = ({variant = "NSBody1"}: StyledTextProps) =>
   textVariants[variant];
 
 export const Text = styled.h1<StyledTextProps>(
+  `
+color: ${(props) => (props.dark ? "white" : "dark")};
+`,
   textStyle,
-  textColor,
   alignText,
   baseStyling
 );
