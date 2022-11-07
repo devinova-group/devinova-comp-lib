@@ -1,15 +1,13 @@
-import React, { useState } from "react";
-import { Button } from "..";
-import { Dialog } from "./Dialog";
+import React, {useState} from "react";
+import {Button} from "..";
+import {Dialog} from "./Dialog";
 
 export const DialogTest = () => {
   const [open, setOpen] = useState(true);
   return (
-    <Dialog closeModal={open}>
+    <>
       <Button
-        onClick={() => {
-          !open ? setOpen(true) : setOpen(false);
-        }}
+        onClick={() => setOpen(true)}
         variant="error"
         size="small"
         style={{
@@ -19,6 +17,9 @@ export const DialogTest = () => {
         }}
         children={"Close"}
       />
-    </Dialog>
+      <Dialog closeDialog={() => setOpen(false)} open={open}>
+        Test
+      </Dialog>
+    </>
   );
 };

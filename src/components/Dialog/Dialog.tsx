@@ -1,41 +1,20 @@
-import { css } from "@emotion/css";
-import React, { useEffect, useState } from "react";
-import { Button, X } from "..";
-import { InnerDialog } from "./InnerDialog.styles";
-import { DialogProps } from "./Dialog.props";
-import { DialogWrapper } from "./DialogWrapper.styles";
+import {css} from "@emotion/css";
+import React, {useEffect, useState} from "react";
+import {Button, X} from "..";
+import {InnerDialog} from "./InnerDialog.styles";
+import {DialogProps} from "./Dialog.props";
+import {DialogWrapper} from "./DialogWrapper.styles";
 
 export const Dialog = ({
   children,
-  closeModal,
-  buttonSize,
-  buttonStyle,
-  buttonVariant,
   dark,
   style,
+  open,
+  closeDialog,
 }: DialogProps) => {
-  const [open, setOpen] = useState(false);
-  useEffect(() => {
-    setOpen(false);
-  }, [closeModal]);
   return (
     <>
-      <Button
-        variant={!buttonVariant ? "primary" : buttonVariant}
-        size={!buttonSize ? "small" : buttonSize}
-        style={buttonStyle}
-        onClick={() => {
-          setOpen(true);
-        }}
-      >
-        Open Dialog
-      </Button>
-      <DialogWrapper
-        open={open}
-        onClick={() => {
-          setOpen(false);
-        }}
-      >
+      <DialogWrapper open={open} onClick={closeDialog}>
         <InnerDialog
           style={style}
           dark={dark}
@@ -44,9 +23,7 @@ export const Dialog = ({
           }}
         >
           <span
-            onClick={() => {
-              setOpen(false);
-            }}
+            onClick={closeDialog}
             className={css`
               position: absolute;
               top: 1rem;
