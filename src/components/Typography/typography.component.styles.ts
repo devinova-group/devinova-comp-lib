@@ -290,7 +290,7 @@ const textStyle = ({variant = "NSBody1"}: StyledTextProps) =>
 
 export const Text = styled.h1<StyledTextProps>(
   `
-color: ${(props) => (props.dark ? "white" : "dark")};
+color: ${(props) => (props.dark ? "white" : "black")};
 `,
   textStyle,
   alignText,
