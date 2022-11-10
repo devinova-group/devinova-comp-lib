@@ -24,24 +24,26 @@ export const Collapse = ({
   return open ? (
     <CollapseDiv orientation={orientation} style={style} width={width}>
       {children}
-      <ChevronUp
-        height={24}
+      <span
         className={centerOpenIcon}
         onClick={() => {
           setOpen(false);
         }}
-      />
+      >
+        <ChevronUp height={24} />
+      </span>
     </CollapseDiv>
   ) : (
     <CollapsedDiv orientation={orientation} style={style} width={width}>
       {title}
-      <ChevronDown
-        height={24}
+      <span
         className={centerOpenIcon}
         onClick={() => {
           setOpen(true);
         }}
-      />
+      >
+        <ChevronDown height={24} />
+      </span>
     </CollapsedDiv>
   );
 };

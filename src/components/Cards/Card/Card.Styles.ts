@@ -1,10 +1,9 @@
 import styled from "@emotion/styled";
-import { colorPalette } from "../../../theme";
-import { CardProps } from "../Card.props";
+import {colorPalette} from "../../../theme";
+import {CardProps} from "../Card.props";
 
 export const Card = styled.div<CardProps>`
   box-sizing: border-box;
-  position: relative;
   min-height: 280px;
   width: 350px;
   background-color: ${(props) =>

@@ -6,7 +6,7 @@ export const Typography: React.FC<TypographyProps> = ({
   variant,
   as,
   children,
-  color,
+  dark,
   style,
   textAlign,
 }) => {
@@ -22,8 +22,8 @@ export const Typography: React.FC<TypographyProps> = ({
     <Text
       as={Tag}
       variant={variant}
-      color={color}
       style={style}
+      dark={dark}
       textAlign={textAlign}
     >
       {children}

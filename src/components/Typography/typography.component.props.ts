@@ -4,13 +4,13 @@ interface TypographyProps {
   variant?: keyof typeof variantMapping;
   as?: any;
   children?: React.ReactNode | never;
-  color?: string;
+  dark?: boolean;
   textAlign?: string;
   style?: React.CSSProperties;
 }
 
 interface StyledTextProps extends TypographyProps {
-  color?: string;
+  dark?: boolean;
   variant?: string | any;
   textAlign?: string;
 }
