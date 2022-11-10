@@ -1,6 +1,6 @@
-import React, {useState} from "react";
-import {Button} from "..";
-import {Dialog} from "./Dialog";
+import React, { useState } from "react";
+import { Button } from "..";
+import { Dialog } from "./Dialog";
 
 export const DialogTest = () => {
   const [open, setOpen] = useState(true);
@@ -17,7 +17,7 @@ export const DialogTest = () => {
         }}
         children={"Close"}
       />
-      <Dialog closeDialog={() => setOpen(false)} open={open}>
+      <Dialog onClose={() => setOpen(false)} open={open}>
         Test
       </Dialog>
     </>

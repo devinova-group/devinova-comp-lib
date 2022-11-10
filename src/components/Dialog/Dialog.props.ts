@@ -5,7 +5,7 @@ export interface DialogProps {
   dark?: boolean;
   style?: CSSProperties;
   open: boolean;
-  closeDialog: () => void;
+  onClose: () => void;
 }
 
 export interface DialogStyleProps {
