@@ -6,6 +6,7 @@ import {Bolt} from "../Icons";
 import {Bookmark} from "../Icons";
 import {Box} from "../Icons";
 import {Brush} from "../Icons";
+import { Code } from "../Icons";
 import {Delete} from "../Icons";
 import {Dollar} from "../Icons";
 import {Eject} from "../Icons";
@@ -13,6 +14,7 @@ import {Eye} from "../Icons";
 import {Fire} from "../Icons";
 import {Flag} from "../Icons";
 import {Minus} from "../Icons";
+import { Menu } from "../Icons";
 import {Plus} from "../Icons";
 import {ErrorLoading} from "../Icons";
 import {SuccessLoading} from "../Icons";
@@ -146,7 +148,23 @@ const Icon = ({color, className, name, size, style}: IconType) => {
         }
       </>
     );
-  } else if (name == "Delete") {
+  } else if (name == "Code") {
+    return (
+      <>
+        {
+          <Code
+            name={name}
+            fill={color}
+            width={size != undefined ? iconSize[size].width : 24}
+            height={size != undefined ? iconSize[size].height : 24}
+            style={style}
+            className={className}
+          />
+        }
+      </>
+    );
+  }  
+  else if (name == "Delete") {
     return (
       <>
         {
@@ -266,7 +284,23 @@ const Icon = ({color, className, name, size, style}: IconType) => {
         }
       </>
     );
-  } else if (name == "ErrorLoading") {
+  } else if (name == "Menu") {
+    return (
+      <>
+        {
+          <Menu
+            name={name}
+            fill={color}
+            width={size != undefined ? iconSize[size].width : 24}
+            height={size != undefined ? iconSize[size].height : 24}
+            style={style}
+            className={className}
+          />
+        }
+      </>
+    );
+  }  
+  else if (name == "ErrorLoading") {
     return (
       <>
         {
