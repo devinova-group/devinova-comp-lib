@@ -1,7 +1,7 @@
 export {Badge} from "./Badge";
-export {Button} from "./Button";
+export {default as Button} from "./Button";
 export {Card, CardContent, CardHeader, CardMedia, Collapse} from "./Cards";
-export {IconButton} from "./IconButton";
+export {default as IconButton} from "./IconButton";
 export * from "./Icons";
 export {Loader} from "./Loading";
 export {Textfield} from "./Textfield";

@@ -8,7 +8,7 @@ export const DialogTest = () => {
     <>
       <Button
         onClick={() => setOpen(true)}
-        variant="error"
+        variant="contained"
         size="small"
         style={{
           position: "absolute",
