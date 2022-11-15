@@ -1,6 +1,7 @@
 import styled, {CSSObject} from "@emotion/styled";
 import {StyledTextProps, TypographyProps} from "./typography.component.props";
 import {colorPalette, typography} from "../../theme";
+import {css} from "@emotion/react";
 
 type enumStyles = Record<string, CSSObject>;
 
@@ -288,11 +289,13 @@ const alignText = ({textAlign = "start"}: StyledTextProps) =>
 const textStyle = ({variant = "NSBody1"}: StyledTextProps) =>
   textVariants[variant];
 
+const darkStyle = ({dark = false}: StyledTextProps) =>
+  `color: ${dark ? "white" : "black"};
+`;
+
 export const Text = styled.h1<StyledTextProps>(
-  `
-color: ${(props) => (props.dark ? "white" : "black")};
-`,
   textStyle,
   alignText,
+  darkStyle,
   baseStyling
 );
