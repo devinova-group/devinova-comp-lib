@@ -6,6 +6,7 @@ import { css } from "@emotion/css";
 import { buttonHover} from "./Button.component.styles";
 
 
+
 const Button = ({
   variant,
   onClick,
@@ -35,11 +36,11 @@ const Button = ({
               iconName={iconName}
               className={css({
                 [`.icon`]:{
-                  fill:buttonHover[color].color,
+                  fill:color != undefined ? buttonHover[color].color : "white",
                 },
                 [`&:hover .icon`]: {
                   display: "inline-flex",
-                  fill: buttonHover[color].backgroundColor,
+                  fill: color != undefined ? buttonHover[color].backgroundColor: "#4C3A80",
                 }
               })}   >
         <Icon name={iconName} className="icon" size={size}/>
@@ -58,11 +59,11 @@ const Button = ({
         iconName={iconName}
         className={css({
           [`.icon`]:{
-            fill:buttonHover[color].backgroundColor,
+            fill:color != undefined ? buttonHover[color].backgroundColor : "white",
           }
         })}
         >
-        <Icon name={iconName} className="icon" size={size}/>
+        <Icon name={iconName} className="icon"  size={size}/>
         {children}
         </ButtonComponent> }   
   

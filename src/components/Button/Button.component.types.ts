@@ -4,9 +4,9 @@ export interface ButtonOption  {
     text?: string;
     icon?: string;
     onClick?: () => void;
-    color: 'primary' | 'error' | 'positive';
+    color?: 'primary' | 'error' | 'positive';
     size?: "small" | "medium" | "large";
-    variant: "contained" | "text" | "outlined";
+    variant?: "contained" | "text" | "outlined";
     href?: string;
     disabled?: boolean;
     isFullWidth?: boolean;

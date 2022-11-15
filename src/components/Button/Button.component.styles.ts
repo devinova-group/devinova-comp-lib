@@ -4,16 +4,7 @@ import { typography } from '../../theme';
 import { ButtonOption } from "./Button.component.types";
 
 const base: CSSObject = {
-  color:colorPalette.Text.White,
   cursor: "pointer",
-  display: "flex",
-  fontWeight: "600",
-  alignItems: "center",
-  justifyContent: "center",
-  verticalAlign: "middle",
-  userSelect: "none",
-  border: "2px solid transparent",
-  fontSize: "20px",
   transition: "all .15s ease-in-out",
   "&:focus": {
     outline: "0",
@@ -23,7 +14,8 @@ const base: CSSObject = {
 type EnumStyles = Record<string, CSSObject>;
 
 export const buttonVariantColor: EnumStyles = {
-contained: {  
+contained: 
+{  
   primary: {
     color:colorPalette.Text.White,
     backgroundColor: colorPalette.DeviDaisy[500],
@@ -41,8 +33,11 @@ contained: {
     color: colorPalette.Text.White,
     backgroundColor: colorPalette.Status.Positive,
     boxShadow: "5px 10px 20px rgba(0,0,0,0.25)",
-  }},
-  outlined: {  primary: {
+  }
+},
+  outlined: 
+  {  
+    primary: {
     color:colorPalette.DeviDaisy[500],
     backgroundColor: 'transparent',
     border: `2px solid ${colorPalette.DeviDaisy[500]}`,
@@ -60,7 +55,8 @@ contained: {
     backgroundColor: 'transparent',
     border: `2px solid ${colorPalette.lightBadgeColor.Active}`,
   }},
-  text:{  primary: {
+  text:{  
+    primary: {
     color:colorPalette.DeviDaisy[500],
     backgroundColor: 'transparent',
   },
@@ -71,12 +67,14 @@ contained: {
   positive: {
     color:colorPalette.Status.Positive,
     backgroundColor: 'transparent',
-  }}
+  }
+}
 };
 
 
 export const buttonHover: EnumStyles ={
 primary:{
+  display:"flex",
   color:colorPalette.Text.White,
   backgroundColor: colorPalette.DeviDaisy[500],
   boxShadow: "5px 10px 20px rgba(0,0,0,0.25)",
@@ -89,6 +87,7 @@ primary:{
   },
 },
 error:{
+  display:"flex",
   color: colorPalette.Text.White,
     backgroundColor: colorPalette.Status.Error,
     boxShadow: "5px 10px 20px rgba(0,0,0,0.25)",
@@ -102,6 +101,7 @@ error:{
   },
 },
 positive:{
+  display:"flex",
   color: colorPalette.Text.White,
   backgroundColor: colorPalette.Status.Positive,
   boxShadow: "5px 10px 20px rgba(0,0,0,0.25)",
@@ -133,7 +133,7 @@ const buttonSize: EnumStyles = {
     fontFamily: typography.Quicksand,
     fontWeight:'600',
     fontSize: "20px",
-    padding: "15px 30px",
+    padding: "10px 30px 15px 30px",
     gap:"8px",
     borderRadius: "6px",
   },
@@ -151,28 +151,27 @@ const buttonSize: EnumStyles = {
 
 const buttonDisabled: EnumStyles = {
    primary: {
+    borderRadius: "8px",
     cursor:"not-allowed",
     color:colorPalette.Text.White,
-    backgroundColor: colorPalette.DeviDaisy[500],
     background: "rgba(96, 68, 181, 0.35)",
     boxShadow: "5px 10px 20px rgba(0, 0, 0, 0.25)",
-    borderRadius: "8px",
+    ":active":{background: "rgba(96, 68, 181, 0.35)"},
   },
   error: {
+    borderRadius: "8px",
     cursor:"not-allowed",
     color:colorPalette.Text.White,
-    backgroundColor: colorPalette.Status.Error,
     background: "rgba(193, 41, 69, 0.55)",
     boxShadow: "5px 10px 20px rgba(0, 0, 0, 0.25)",
-    borderRadius: "8px",
   }, 
   positive: {
+    borderRadius: "8px",
     cursor:"not-allowed",
     color:colorPalette.Text.White,
-    backgroundColor: colorPalette.Status.Positive,
     background: "rgba(38, 150, 43, 0.5)",
     boxShadow: "5px 10px 20px rgba(0, 0, 0, 0.25)",
-    borderRadius: "8px",
+    
   },
 };
 
@@ -189,11 +188,10 @@ const fullWidth = ({ isFullWidth = false }: ButtonOption) =>
 
   
 export const ButtonComponent = styled.button<ButtonOption>`
-      ${base},
-      ${(props) => props.variant && buttonVariantColor[props.variant][props.color] },
-      ${(props) => props.size ? buttonSize[props.size] : buttonSize["medium"]}
-      ${(props) => props.disabled ? buttonDisabled[props.color]  : buttonVariantColor[props.variant][props.color]}
+      ${(props) => props.variant && props.color ? buttonVariantColor[props.variant][props.color] : props.color ? buttonVariantColor["contained"][props.color]: props.variant ? buttonVariantColor[props.variant]["primary"]: buttonVariantColor["contained"]["primary"]},
+      ${(props) => props.size ? buttonSize[props.size] : buttonSize["medium"]},
+      ${(props) => props.disabled === true && props.color ? buttonDisabled[props.color]  : ""},
       ${fullWidth}
-      ${(props) => props.isHover && buttonHover[props.color]}
+      ${(props) => props.isHover && props.color && buttonHover[props.color]}
+      ${base}
   `;
-
