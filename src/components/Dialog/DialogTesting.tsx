@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import { Button } from "..";
-import { Dialog } from "./Dialog";
+import React, {useState} from "react";
+import {Button} from "..";
+import {Dialog} from "./Dialog";
 
 export const DialogTest = () => {
   const [open, setOpen] = useState(true);

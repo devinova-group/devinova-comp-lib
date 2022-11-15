@@ -18,6 +18,7 @@ export const h1Neucha = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
 h1Neucha.args = {
   variant: "h1Neucha",
+  dark: true,
 };
 
 export const h2QS = Template.bind({});
