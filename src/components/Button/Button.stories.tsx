@@ -1,6 +1,6 @@
 import React, {Children} from "react";
 import {ComponentStory, ComponentMeta} from "@storybook/react";
-import Button from "./Button.component"
+import Button from "./Button.component";
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
@@ -36,4 +36,3 @@ Primary.args = {
   disabled: false,
   isHover: false,
 };
-
