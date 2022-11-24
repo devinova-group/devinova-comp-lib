@@ -6,7 +6,9 @@ import {Bolt} from "../Icons";
 import {Bookmark} from "../Icons";
 import {Box} from "../Icons";
 import {Brush} from "../Icons";
-import { Code } from "../Icons";
+import {Code } from "../Icons";
+import {Check } from "../Icons";
+import {Clock } from "../Icons";
 import {Delete} from "../Icons";
 import {Dollar} from "../Icons";
 import {Eject} from "../Icons";
@@ -16,6 +18,8 @@ import {Flag} from "../Icons";
 import {Minus} from "../Icons";
 import { Menu } from "../Icons";
 import {Plus} from "../Icons";
+import {Pencil } from "../Icons";
+import {X } from "../Icons";
 import {ErrorLoading} from "../Icons";
 import {SuccessLoading} from "../Icons";
 
@@ -164,6 +168,37 @@ const Icon = ({color, className, name, size, style}: IconType) => {
       </>
     );
   }  
+  else if (name == "Check") {
+    return (
+      <>
+        {
+          <Check
+            name={name}
+            fill={color}
+            width={size != undefined ? iconSize[size].width : 24}
+            height={size != undefined ? iconSize[size].height : 24}
+            style={style}
+            className={className}
+          />
+        }
+      </>
+    );
+  }  else if (name == "Clock") {
+    return (
+      <>
+        {
+          <Clock
+            name={name}
+            fill={color}
+            width={size != undefined ? iconSize[size].width : 24}
+            height={size != undefined ? iconSize[size].height : 24}
+            style={style}
+            className={className}
+          />
+        }
+      </>
+    );
+  }  
   else if (name == "Delete") {
     return (
       <>
@@ -239,7 +274,53 @@ const Icon = ({color, className, name, size, style}: IconType) => {
         }
       </>
     );
-  } else if (name == "Flag") {
+  } else if (name == "Plus") {
+    return (
+      <>
+        {
+          <Plus
+            name={name}
+            fill={color}
+            width={size != undefined ? iconSize[size].width : 24}
+            height={size != undefined ? iconSize[size].height : 24}
+            style={style}
+            className={className}
+          />
+        }
+      </>
+    );
+  } else if (name == "Pencil") {
+    return (
+      <>
+        {
+          <Pencil
+            name={name}
+            fill={color}
+            width={size != undefined ? iconSize[size].width : 24}
+            height={size != undefined ? iconSize[size].height : 24}
+            style={style}
+            className={className}
+          />
+        }
+      </>
+    );
+  } else if (name == "X") {
+    return (
+      <>
+        {
+          <X
+            name={name}
+            fill={color}
+            width={size != undefined ? iconSize[size].width : 24}
+            height={size != undefined ? iconSize[size].height : 24}
+            style={style}
+            className={className}
+          />
+        }
+      </>
+    );
+  }
+   else if (name == "Flag") {
     return (
       <>
         {
