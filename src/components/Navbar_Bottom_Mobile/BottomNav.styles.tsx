@@ -28,7 +28,7 @@ export const ItemDiv = styled.div({
     backgroundColor: "#4C3A80",
     boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.15)",
     borderRadius: "8px",
-    [".icon"] :{
+    ["svg"] :{
     display: "flex",
     margin: "12px"
     },
@@ -39,7 +39,7 @@ export const ItemDiv = styled.div({
      border: "2px solid #4C3A80",
      boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.15)",
      borderRadius: "8px",
-     [".icon"] :{
+     ["svg"] :{
         display: "flex",
         margin: "12px",
         fill: "#4C3A80",
