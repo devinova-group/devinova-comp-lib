@@ -8,3 +8,4 @@ export {Textfield} from "./Textfield";
 export {Toast, ToastPortal} from "./Toast";
 export {Typography} from "./Typography";
 export {Dialog} from "./Dialog";
+export {Avatar} from "./Avatar";
